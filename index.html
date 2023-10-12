@@ -3,13 +3,931 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/anime.min.js"></script>
     <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-44b5bae5.js"></script>
-    <link rel="stylesheet" href="/assets/index-48a8825f.css">
+    <script type="module" crossorigin src="/assets/index-e72bb31d.js"></script>
+    <link rel="stylesheet" href="/assets/index-138ced36.css">
   </head>
   <body>
-    <div id="app"></div>
     
+
+    <div name="root" class=" bg-gray-100 dark:bg-[#0D0D12] mx-auto w-full ">
+
+      <section name="header" class="mx-auto max-w-7xl px-5 sm:px-10 py-[44px] sm:py-[40px]">
+
+          <section name="navigation" class="flex justify-between items-center">
+            <div id="logo">
+                <a href="#">
+                    <div class="mr-[6rem] w-[2.75rem] md:max-w-[64px] md:w-20">
+                        <svg class="rounded-xl sm:rounded-2xl " viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#44A3DD" points="0 0 64 0 64 64 0 64" />
+                            <path d="M12.5002858,23 L25.6761004,23 C26.6656866,23 27.5759827,23.5413597 28.0484682,24.4108643 L39.7799231,46 L24.081859,46 C23.0922729,46 22.1819767,45.4586403 21.7094912,44.5891357 L11.1823037,25.2161865 C10.7867648,24.4882851 11.0561979,23.5775568 11.7840993,23.1820179 C12.0039143,23.0625713 12.2501137,23 12.5002858,23 Z" fill="#BEE5F7" />
+                            <path d="M51.5910069,23 C51.8411791,23 52.0873785,23.0625713 52.3071934,23.1820179 C53.0130373,23.5655707 53.2877777,24.4335625 52.943121,25.1495294 L52.9089891,25.2161865 L42.3818016,44.5891357 C41.9245575,45.4305918 41.0572931,45.9647321 40.1049406,45.9983172 L40.0094337,46 L24.5560452,46 L24.081859,46 L23.9861474,45.9983099 C23.4883845,45.9807184 23.0138729,45.8263853 22.6090091,45.5629027 C22.8118648,45.6793724 23.0414562,45.7544235 23.2863079,45.7765197 C23.3123502,45.7788699 23.522255,45.7983421 23.7558113,45.7356356 C23.8545852,45.7091163 24.2192366,45.6239743 24.6056229,45.2625823 C24.7211639,45.1545153 24.8827176,44.9224567 25.0902842,44.5664065 L36.0428245,24.4108643 C36.5000686,23.5694082 37.367333,23.0352679 38.3196855,23.0016828 L38.4151924,23 L51.5910069,23 Z" fill="#FFFFFF" /></g>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <nav name="bullets" class="base-text ">
+                <ul class="hidden md:flex gap-8 mr-8">
+                    <li><a href="#usecases-block">Use cases</a></li>
+                    <li><a href="#features-block">Features</a></li>
+                    <li><a href="#instruction-block">How to start</a></li>
+                </ul>
+            </nav>
+            <div name="button-mode">
+        
+                <div class="w-64 flex items-center gap-3 justify-center">
+                    <div class="w-6 h-6 lg:w-10 lg:h-10 flex items-center justify-center ">
+                        <img id="sun-icon" class="inline dark:hidden hover:scale-95 transition-all duration-100" src="/img/landing/hero-block/theme-icon/sun_desk.svg"  alt="Light Mode">
+                        <img id="moon-icon" class="hidden dark:inline hover:scale-95 transition-all duration-100" src="/img/landing/hero-block/theme-icon/moon_desk.svg" alt="Dark Mode">
+                    </div>
+        
+                    <a class="btn-secondary shrink-0 dark:hidden">Get started</a>
+                    <a class="btn-outline shrink-0 hidden dark:inline">Get started</a>
+                </div>
+        
+            </div>
+        </section>
+
+        <div class="mt-5 sm:mt-10">
+          <section id="hero-block" class="flex flex-col items-center gap-5 sm:grid sm:grid-cols-12">
+            <div name="hero-block-description" class="py-5 col-span-7 max-w-2xl">
+                <div name="hero-block-title" class="flex flex-col gap-6 sm:gap-8 items-center sm:items-start sm:flex-none lg:min-w-[692px] md:min-w-[592px] sm:min-w-[377px]">
+    
+                    <h1 class="h1-header lg:h1-header-lg text-center sm:text-left sm:text-6xl max-w-[470px] sm:max-w-max dark:text-white">
+                        Crypto<br class="lg:hidden"> payments for <span class="text-general">telegram bots</span>
+                    </h1>
+    
+                    <h2 class="base-text sm:base-text-lg">
+                        Seamlessly accept crypto payments<br>in your Telegram bots and services.
+                    </h2>
+                    <a class="btn font-medium lg:font-bold">Get started</a>
+    
+                    <div class="text-center sm:mt-6 sm:text-left flex flex-col gap-3 sm:gap-4">
+        
+                        <div id="photo-bots" class="flex justify-center sm:justify-start">
+    
+                            <div class="w-16 h-16 sm:w-24 sm:h-24 bg-white dark:bg-[#0D0D12] rounded-full mr-[-16px] sm:mr-[-32px]">
+                                <img class="p-0.5 sm:p-1" src="/img/landing/hero-block/bot-icons/Ellipse_2.png" alt="Bot Picture 2">
+                            </div>
+    
+                            <div class="w-16 h-16 sm:w-24 sm:h-24 bg-white dark:bg-[#0D0D12] rounded-full mr-[-16px] sm:mr-[-32px]">
+                                <img class="p-0.5 sm:p-1" src="/img/landing/hero-block/bot-icons/Ellipse_1.png" alt="Bot Picture 1">
+                            </div>
+    
+                            <div class="w-16 h-16 sm:w-24 sm:h-24 bg-white dark:bg-[#0D0D12] rounded-full mr-[-16px] sm:mr-[-32px]">
+                                <img class="p-0.5 sm:p-1" src="/img/landing/hero-block/bot-icons/Ellipse_4.png" alt="Bot Picture 4">
+                            </div>
+    
+                            <div class="w-16 h-16 sm:w-24 sm:h-24 bg-white dark:bg-[#0D0D12] rounded-full mr-[-16px] sm:mr-[-32px]">
+                                <img class="p-0.5 sm:p-1" src="/img/landing/hero-block/bot-icons/Ellipse_5.png" alt="Bot Picture 5">
+                            </div>
+    
+                            <div class="w-16 h-16 sm:w-24 sm:h-24 bg-white dark:bg-[#0D0D12] rounded-full mr-[-16px] sm:mr-[-32px]">
+                                <img class="p-0.5 sm:p-1" src="/img/landing/hero-block/bot-icons/Ellipse_3.png" alt="Bot Picture 3">
+                            </div>
+    
+                        </div>
+    
+    
+                        <p class="base-text">Popular bots use Crypto Pay</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+            <div id="img-phone" class="sm:col-span-5 md:min-w-[350px] sm:min-w-[300px]">
+                <img class="max-h-[700px] inline dark:hidden" src="/img/landing/hero-block/img_phone.png">
+                <img class="max-h-[700px] hidden dark:inline" src="/img/landing/hero-block/img_phone_dark.png">
+            </div>
+        </section>
+        
+        </div>
+
+      </section>
+
+      <!-- MAIN -->
+    
+      <main class="bg-white dark:bg-[#0D0D12] rounded-b-[1.5rem] sm:rounded-b-[2.5rem] relative ">
+        
+        <!-- Usecases -->
+
+        <section id="usecases-block" class=" bg-[#232328] dark:bg-dark181 sm:py-20 lg:py-48 lg:my-auto  py-8 ">
+        <div class="max-w-7xl mx-auto px-5 sm:px-10 overflow-hidden ">
+        
+            <!-- <div class="flex flex-col gap-8 items-center sm:flex-row sm:flex-1 sm:justify-between"> -->
+            <div class="flex flex-col items-center gap-8 sm:flex-row sm:flex-1 sm:justify-between sm:items-center">
+        
+            <!-- bg-gradient-to-tl from-[#FAACA8] to-[#DDD6F3] -->
+            <!-- bg-gradient-to-tr from-[#FFECD2] to-[#FCB69F] -->
+            <!-- bg-gradient-to-t from-[#C2E9FB] to-[#A1C4FD] -->
+        
+            <!-- Screen 1 -->
+            <div class="slide ">
+                <div class="flex flex-col gap-8 sm:flex-row sm:flex-1 sm:justify-around sm:items-center   lg:grid lg:grid-cols-12">
+                    <div name="pic-frame" class=" w-full max-w-[335px] sm:max-w-none sm:w-1/3 bg-gradient-to-tl from-[#FAACA8] to-[#DDD6F3] rounded-preset aspect-square   lg:w-full lg:col-span-5 ">
+                        <div class=" aspect-square flex items-center">
+                            <img class=" " src="/img/landing/usercases-block/img1.png">
+                        </div>
+                    </div>
+                    
+                    <div name="text-frame" class="flex flex-col gap-5 md:flex md:flex-col md:gap-8 items-center sm:items-start   lg:col-span-5 lg:col-start-7">
+                        <h2 class="h2-header lg:h2-header-lg text-white text-center sm:text-left"><span class="text-general">Instant <br class="hidden sm:inline">Auto Sales:</span> <br>Boost conversion</h2>
+                        <p class="base-text text-white text-center sm:text-left">
+                            Immediately deliver digital products<br>and services to your users.
+                        </p>
+                        <button class="btn w-full sm:w-auto ">Open API Docs</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Screen 2 -->
+            <div class="slide hidden">
+                <div class="flex flex-col gap-8 sm:flex-row sm:flex-1 sm:justify-around sm:items-center lg:grid lg:grid-cols-12">
+                    <div name="pic-frame" class=" w-full max-w-[335px] sm:max-w-none sm:w-1/3 bg-gradient-to-tr from-[#FFECD2] to-[#FCB69F] rounded-preset  lg:w-full lg:col-span-5  ">
+                        <div class=" aspect-square flex items-center lg:p-8">
+                            <img class=" " src="/img/landing/usercases-block/img2.png">
+                        </div>
+                    </div>
+                    
+                    <div name="text-frame" class="flex flex-col gap-5 md:flex md:flex-col md:gap-8 items-center sm:items-start   lg:col-span-5 lg:col-start-7">
+                        <h2 class="h2-header lg:h2-header-lg text-white text-center sm:text-left"><span class="text-general">
+                            Channels <br class="hidden sm:inline">integration:</span> <br>Seamless access
+                        </h2>
+                        <p class="base-text text-white text-center sm:text-left">
+                            Automatically unlock exclusive content<br>to your users.
+                        </p>
+                        <button class="btn w-full sm:w-auto">Open API Docs</button>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <!-- Screen 3 -->
+            <div class="slide hidden">
+                <div class="flex flex-col gap-8  sm:flex-row sm:flex-1 sm:justify-around sm:items-center    lg:grid lg:grid-cols-12">
+                    <div name="pic-frame" class="w-full max-w-[335px] sm:max-w-none sm:w-1/3 bg-gradient-to-t from-[#C2E9FB] to-[#A1C4FD] rounded-preset  lg:w-full lg:col-span-5 ">
+                        <div class=" aspect-square flex items-center lg:p-8">
+                            <img class=" " src="/img/landing/usercases-block/img3.png">
+                        </div>
+                    </div>
+                    
+                    <div name="text-frame" class="flex flex-col gap-5 md:flex md:flex-col md:gap-8 items-center sm:items-start   lg:col-span-5 lg:col-start-7 ">
+                        <h2 class="h2-header lg:h2-header-lg text-white text-center sm:text-left"><span class="text-general">
+                            Endless <br class="hidden sm:inline">customization:</span> <br>with Webhooks
+                        </h2>
+                        <p class="base-text text-white text-center sm:text-left">
+                            Automatically unlock exclusive content<br>to your users.
+                        </p>
+                        <button class="btn w-full sm:w-auto">Open API Docs</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div name="pagination" class="flex w-[335px] sm:h-72 sm:w-auto gap-3 sm:flex-col items-center justify-between text-white sm:shrink-0">
+                <p id="current-slide" class="description-text">01</p>
+                <div id="page-slide-1" onclick="setSlide(1)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide-active"></div>
+                <div id="page-slide-2" onclick="setSlide(2)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
+                <div id="page-slide-3" onclick="setSlide(3)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
+                <!-- active bg blue #41A4DF opacity-100 -->
+                <p id="all-slides" class="description-text">03</p>
+            </div>
+        
+            </div>
+        </div>
+        </section>            
+
+    
+        <div class="mx-auto max-w-7xl px-5 sm:px-10 py-[2rem] lg:py-[7.5rem]">
+          <div class="text-opacity-5 opacity-5 text mb-4 text-center"> I Apologize The animation will be up in a couple of hours, I’m wildly sorry that I didn’t have time to finish it by 23:00 </div>
+          <!-- SectionFeatures -->
+            <section id="features-block" class="flex flex-col gap-4 md:grid md:grid-cols-12 md:gap-5  max-w-md mx-auto sm:max-w-max   sm:grid sm:grid-cols-6">
+
+              <!-- Accept a wide range of cryptocurrencies -->
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 gap-6 items-center sm:col-span-full md:py-[42px] md:gap-[42px] md:px-14    ">
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <div class="flex flex-col gap-6">
+                          <h3 class="h3-header ">Accept a wide range of cryptocurrencies</h3>
+                          <p class="base-text opacity-80">Bill any supported cryptocurrencies with asset parameter in <a class="landing-link">GetInvoice</a> method</p>
+                          <!-- <LandingFrameCurrencyOld class="-order-1 md:order-1" /> -->
+                          <div name="FrameCurrency" class="-order-1 md:order-1">
+                            <div name="coins">
+
+                              <div name="currency-coins-mobile" class="flex flex-wrap max-w-sm mx-auto gap-2 justify-center md:hidden">
+                                  <div class="flex gap-3">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/ETH.svg" alt="ETH">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/USDT.svg" alt="USDT">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/BTC.svg" alt="BTC">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/TON.svg" alt="TON">
+                                  </div>
+                              
+                                  <div class="flex gap-3 ml-4">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/BNB.svg" alt="BNB">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/TRX.svg" alt="TRX">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/USDC.svg" alt="USDC">
+                                      <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/LTC.svg" alt="LTC">
+                                  </div>
+                              </div>
+                              
+                              
+                              <div name="currency-coins-desk" class="hidden md:inline">
+                              
+                                  <div name="currency-coins" class="flex justify-between flex-1 space-x-4 md:space-x-2">
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px] justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/ETH.svg" alt="ETH">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">ETH</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px] justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/USDT.svg" alt="USDT">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">USDT</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px] justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/TON.svg" alt="TON">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">TON</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px]  justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/BTC.svg" alt="BTC">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">BTC</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px]  justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/TRX.svg" alt="TRX">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">TRX</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px]  justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/LTC.svg" alt="LTC">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">LTC</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px] justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/USDC.svg" alt="USDC">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">USDC</p>
+                                          </div>
+                                      </div>
+                              
+                                      <div name="coin-n" class="flex flex-col gap-2 items-center">
+                                          <div name="coin-icon" class="max-w-[96px]  justify-center items-center">
+                                              <img src="/img/landing/features-block/CoinIcons/BNB.svg" alt="BNB">
+                                          </div>
+                                          <div name="coin-label" class="hidden md:flex md:py-1 md:px-3 justify-center">
+                                              <p class="style-currency">BNB</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- One click to start -->
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 md:py-[42px] gap-6 items-center md:col-span-5  md:row-start-2 md:gap-4  md:px-[10%]    sm:col-span-3">
+                  <!-- ANIMATION HERE   -->
+                  <!-- LandingFrameCreateApp -->
+                  <section class="flex flex-1 flex-col justify-center items-center ">
+      
+                      <div class=" w-full relative">
+                  
+                          <!-- light-theme version -->
+                          <div name="button-createapp-light" class="flex dark:hidden">
+                              <img class="createapp-button" src="/img/landing/features-block/CreateApp.svg"/>
+                          </div>
+                  
+                          <!-- dark-theme version -->
+                  
+                          <div name="button-createapp-dark" class="hidden dark:flex">
+                              <img class="createapp-button" src="/img/landing/features-block/CreateApp_dark.svg"/>
+                          </div>
+                      </div>
+                  
+                      <div id="cursor-smooth" class=" createapp-cursor">
+                          <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.1275 3.64677C6.7178 1.12449 1.36473 4.88154 2.23774 9.88607L7.45908 39.8172C8.51449 45.8673 16.9001 46.6127 19.006 40.8435L22.4947 31.2864C22.782 30.4994 23.5293 29.9749 24.3671 29.9723L34.541 29.9403C40.6824 29.921 42.8322 21.7813 37.5012 18.7321L11.1275 3.64677Z" fill="url(#paint0_linear_129_483)" stroke="#F1F5F9" stroke-width="4"/>
+                          <defs>
+                          <linearGradient id="paint0_linear_129_483" x1="1.90306" y1="-33.3301" x2="-24.3108" y2="39.2676" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#9FCCFA"/>
+                          <stop offset="1" stop-color="#0974F1"/>
+                          </linearGradient>
+                          </defs>
+                          </svg>
+                      </div>
+                  
+                  
+                  </section>
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <h3 class="h3-header">One click to start</h3>
+                      <p class="base-text text-opacity-80">Open <a href="#" class="landing-link">@CryptoBot</a>, go to <a href="#" class="landing-link">Crypto Pay</a> and tap Create App to get API Token</p>
+                  </div>
+              </div>
+          
+              <!-- Real-time exchange rates -->
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 gap-6 items-center md:col-span-5 md:row-start-3 md:py-[42px] md:px-[10%] md:gap-4  sm:col-span-3">
+                  <!-- ANIMATION HERE   -->
+                  <!-- LandingFrameExchanges -->
+                  <section class="inline-flex justify-center items-center -space-x-3">
+
+                    <div name="left-group" class="inline-flex  -space-x-[42px] lg:-space-x-[62px]">
+                
+                        <!-- USDT -->
+                        <div class="w-[66px] h-[66px] lg:w-[96px] lg:h-[96px] p-3 lg:p-5 rounded-full  outline outline-offset-0 outline-3 lg:outline-4 dark:outline-[#1A1A1A] outline-[#F1F5F9] bg-gradient-to-tr from-[#8DDAD5] to-[#1BA27A] justify-center items-center">
+                            <svg width="100%" height="100%" viewBox="0 0 59 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.5066 0.691162H6.3125V11.8433H23.8335V28.2349H34.9856V11.8433H52.5066V0.691162Z" fill="white"/>
+                            <path d="M29.5156 29.981C15.0218 29.981 3.27104 27.6872 3.27104 24.8572C3.27104 22.0277 15.0213 19.7333 29.5156 19.7333C44.0095 19.7333 55.7598 22.0277 55.7598 24.8572C55.7598 27.6872 44.0095 29.981 29.5156 29.981ZM58.9839 25.7114C58.9839 22.0623 45.7906 19.1045 29.5156 19.1045C13.2411 19.1045 0.046875 22.0623 0.046875 25.7114C0.046875 28.9248 10.2775 31.6021 23.8342 32.1953V55.7261H34.9854V32.2046C48.6465 31.6299 58.9839 28.9414 58.9839 25.7114Z" fill="white"/>
+                            </svg>
+                        </div>
+                
+                
+                        <!-- BTC -->
+                        <div class=" w-[66px] h-[66px] lg:w-[96px] lg:h-[96px] p-3 lg:p-5 rounded-full outline  outline-offset-0 outline-3 lg:outline-4 dark:outline-[#1A1A1A] outline-[#F1F5F9] bg-gradient-to-tr from-[#FF930F] to-[#FBC411] justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 102 136" fill="none">
+                                <path d="M101.534 54.7755C103.639 40.6791 92.9036 33.1047 78.2124 28.0474L82.9715 8.94362L71.3495 6.04834L66.7174 24.6422C63.6659 23.882 60.5261 23.161 57.4088 22.4543L62.0717 3.73704L50.4497 0.841772L45.6864 19.927C43.1572 19.3494 40.6692 18.782 38.2593 18.1816L38.2736 18.124L22.245 14.1223L19.1515 26.5401C19.1515 26.5401 27.7794 28.5148 27.5924 28.6342C32.3054 29.8083 33.1551 32.9197 33.0113 35.3906L27.5904 57.1506C27.9194 57.2326 28.3348 57.3535 28.7955 57.5381L27.5699 57.2328L19.9672 87.7162C19.3928 89.1453 17.9329 91.2883 14.6409 90.4769C14.7561 90.6454 6.19374 88.3726 6.19374 88.3726L0.424293 101.678L15.5584 105.449C18.3714 106.149 21.1309 106.889 23.8411 107.582L19.0369 126.902L30.6507 129.795L35.4119 110.683C38.5786 111.542 41.6569 112.335 44.6755 113.087L39.9286 132.106L51.5506 135.001L56.3528 115.725C76.1741 119.475 91.096 117.961 97.3631 100.027C102.418 85.5914 97.1131 77.2563 86.6813 71.8276C94.2863 70.0888 100.012 65.0955 101.534 54.7755ZM74.9765 92.0222C71.381 106.455 47.0724 98.661 39.1846 96.696L45.5621 71.0955C53.4459 73.077 78.7256 76.9727 74.9765 92.0222ZM78.5602 54.5635C75.2884 67.6968 55.0431 61.02 48.4774 59.3931L54.2589 36.1857C60.8307 37.8229 81.9795 40.873 78.5602 54.5635Z" fill="white"/>
+                            </svg>
+                        </div>
+                
+                
+                        <!-- TON -->
+                        <div class=" w-[66px] h-[66px] lg:w-[96px] lg:h-[96px] p-4 lg:p-6 rounded-full outline outline-offset-0 outline-3 lg:outline-4 dark:outline-[#1A1A1A] outline-[#F1F5F9] bg-gradient-to-tr from-[#4481EB] to-[#04BEFE] justify-center items-center">
+                            <svg width="100%" height="100%" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M41.3927 0.790039H8.61262C2.58554 0.790039 -1.2344 7.29147 1.79766 12.5473L22.0283 47.6127C23.3484 49.9023 26.6568 49.9023 27.977 47.6127L48.2118 12.5473C51.2399 7.29987 47.4198 0.790039 41.3968 0.790039H41.3927ZM22.0118 37.0971L17.6059 28.57L6.97497 9.55638C6.27365 8.33941 7.13988 6.77992 8.60851 6.77992H22.0077V37.1012L22.0118 37.0971ZM43.0221 9.55227L32.3952 28.5742L27.9894 37.0971V6.77581H41.3886C42.8572 6.77581 43.7234 8.3353 43.0221 9.55227Z" fill="white"/>
+                            </svg>
+                        </div>
+                
+                    </div>
+                
+                <div name="between-arrows" class="flex h-min justify-center items-center">
+                <div class="flex flex-col py-1 px-[10px] lg:px-3 rounded-[19px]  outline-offset-[-1px] backdrop-blur-lg bg-white/60 outline outline-1 outline-white/60 dark:outline-[#191919] dark:bg-[#111111]/60">
+                
+                    <div class="inline dark:hidden">
+                        <div class="w-[14px] h-[8px] lg:w-[21px] lg:h-[12px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 11" fill="none">
+                            <path d="M1 5.45438H20.01M20.01 5.45438L15.5556 1M20.01 5.45438L15.5556 9.90876" stroke="#29313D" stroke-opacity="0.92" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                            </svg>
+                        </div>
+                
+                        <div class="w-[14px] h-[8px] mt-[-2px] lg:w-[21px] lg:h-[12px] lg:mt-[-4px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 12" fill="none">
+                            <path d="M20.0098 6.36313H0.999765M0.999765 6.36313L5.45415 1.90875M0.999765 6.36313L5.45415 10.8175" stroke="#29313D" stroke-opacity="0.92" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                            </svg>
+                        </div>
+                    </div>
+                
+                    <div class="hidden dark:inline">
+                        <div class="w-[14px] h-[8px] lg:w-[21px] lg:h-[12px] ">
+                        <svg width="100%" height="100%" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5.45438H20.01M20.01 5.45438L15.5556 1M20.01 5.45438L15.5556 9.90876" stroke="white" stroke-opacity="0.92" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                        </svg></div>
+                
+                        <div class="w-[14px] h-[8px] mt-[-2px] lg:w-[21px] lg:h-[12px] lg:mt-[-4px]">
+                        <svg width="100%" height="100%" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.01 6.36313H1.00001M1.00001 6.36313L5.45439 1.90875M1.00001 6.36313L5.45439 10.8175" stroke="white" stroke-opacity="0.92" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+                        </svg></div>
+                    </div>
+                
+                
+                </div>
+                </div>
+                
+                    <div class="right-icon">
+                        <!-- Dollar -->
+                        <div class=" inline-flex w-[66px] h-[66px] lg:w-[96px] lg:h-[96px] p-4 lg:p-5 rounded-full bg-gradient-to-tr from-[#434343] to-[#010417] dark:bg-gradient-to-r dark:from-[#181818] dark:to-[#2F2F2F] justify-center items-center ">
+                            <svg width="100%" height="100%" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.1628 35.589V0.656689H12.4007V35.589H10.1628ZM17.1629 11.4912C17.0174 10.1994 16.417 9.19873 15.3617 8.48917C14.3065 7.77051 12.9783 7.41118 11.3773 7.41118C10.231 7.41118 9.23947 7.59312 8.40255 7.957C7.56563 8.31178 6.91519 8.80301 6.45125 9.4307C5.9964 10.0493 5.76898 10.7543 5.76898 11.5457C5.76898 12.2098 5.92363 12.7829 6.23292 13.2651C6.55132 13.7472 6.96523 14.152 7.47466 14.4795C7.99318 14.7979 8.5481 15.0663 9.1394 15.2846C9.7307 15.4938 10.2993 15.6667 10.8451 15.8031L13.5742 16.5127C14.4657 16.731 15.3799 17.0267 16.3169 17.3996C17.2539 17.7726 18.1226 18.2638 18.9232 18.8733C19.7237 19.4828 20.3696 20.2379 20.8608 21.1385C21.3612 22.0391 21.6113 23.1171 21.6113 24.3724C21.6113 25.9553 21.202 27.3608 20.3832 28.5889C19.5736 29.817 18.3956 30.7858 16.8491 31.4954C15.3117 32.2049 13.4514 32.5597 11.2681 32.5597C9.17579 32.5597 7.36549 32.2277 5.83721 31.5636C4.30892 30.8995 3.11267 29.958 2.24846 28.739C1.38425 27.5109 0.906656 26.0554 0.815686 24.3724H5.04577C5.12764 25.3822 5.45513 26.2237 6.02824 26.8969C6.61045 27.5609 7.35185 28.0567 8.25245 28.3842C9.16214 28.7026 10.1583 28.8618 11.2408 28.8618C12.4325 28.8618 13.4923 28.6753 14.4202 28.3023C15.3572 27.9203 16.094 27.3926 16.6307 26.7195C17.1675 26.0372 17.4358 25.2412 17.4358 24.3315C17.4358 23.5037 17.1993 22.826 16.7263 22.2983C16.2623 21.7707 15.6301 21.3341 14.8295 20.9884C14.0381 20.6427 13.1421 20.338 12.1414 20.0741L8.8392 19.1735C6.60135 18.564 4.82744 17.668 3.51748 16.4854C2.21662 15.3028 1.56619 13.7381 1.56619 11.7914C1.56619 10.1812 2.00284 8.77572 2.87615 7.57492C3.74945 6.37413 4.93206 5.44169 6.42396 4.77761C7.91586 4.10444 9.5988 3.76785 11.4728 3.76785C13.3649 3.76785 15.0342 4.09989 16.4806 4.76397C17.9362 5.42804 19.0824 6.34229 19.9193 7.5067C20.7562 8.66201 21.1929 9.99016 21.2293 11.4912H17.1629Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                
+                  </section>
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <h3 class="h3-header ">Real-time<br>exchange rates</h3>
+                      <p class="base-text text-opacity-80">Request up to date currency rate with the <a href="#" class="landing-link">getExchangeRates</a> API method</p>
+                  </div>
+              </div>
+          
+              <!-- PAYMENT-STATISTICS  --> <!-- PAYMENT-STATISTICS  --> <!-- PAYMENT-STATISTICS  -->
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 gap-6 items-center justify-end md:col-span-7 md:row-span-2 lg:row-span-2 md:row-start-2 md:py-[42px] md:px-8 lg:px-14 md:gap-6  sm:col-span-full ">
+                  <div class="bg-[url('/img/landing/features-block/BG-min.png')] w-full h-full sm:px-[12%] sm:py-[10%] py-8 px-8 rounded-3xl  ">
+                      <!-- ANIMATION HERE   -->
+                      <!-- LandingFramePaymentStats -->
+                      <div name="message-n" class="">
+
+                        <div class="w-full flex flex-col gap-1 max-w-[17rem] sm:max-w-[17rem] lg:max-w-[26rem]  mx-auto">
+                        
+                          <!-- screenshot-1 -->
+                          <div name="screenshot" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
+                            <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] ">
+                              Application Statistics <b>@GoodsBot</b> for <b>all time:</b><br>
+                              <br>
+                              Volume: <b>$204,920</b><br>
+                              The number of created invoices: <b>16,256</b><br>
+                              Number of payments: <b>9,353</b><br>
+                              Number of users: <b>5,606</b><br>
+                              <br>
+                              Conversion: <b>57%</b>
+                            </div>
+                            <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
+                          
+                          </div>
+                        
+                          <!-- screenshot-2 -->
+                          <!-- <div id="screenshot-2" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
+                            <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] ">
+                              Application Statistics <b>@GoodsBot</b> for <b>today:</b><br>
+                              <br>
+                              Volume: <b>$6,530</b><br>
+                              The number of created invoices: <b>2,569</b><br>
+                              Number of payments: <b>1,253</b><br>
+                              Number of users: <b>1,606</b><br>
+                              <br>
+                              Conversion: <b>48%</b>
+                            </div>
+                            <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
+                          </div> -->
+                        
+                         <!-- screenshot-3 -->
+                         <!-- <div name="screenshot" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
+                            <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] hidden">
+                              Application Statistics <b>@GoodsBot</b> for <b>yesterday:</b><br>
+                              <br>
+                              Volume: <b>$6,530</b><br>
+                              The number of created invoices: <b>2,569</b><br>
+                              Number of payments: <b>1,253</b><br>
+                              Number of users: <b>1,606</b><br>
+                              <br>
+                              Conversion: <b>48%</b>
+                            </div>
+                            <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
+                          
+                          </div> -->
+                        
+                          <!-- sf-button-touched  id="message-n-button" -->
+                          <div class="w-full flex gap-1 ">
+                            <div id="button-all-Time" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5 sf-button-touched">
+                              <label class="text-white text-xl font-sans leading-none stylesf-button">All Time</label>
+                            </div>
+                            
+                            <div id="button-today" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                              <label class="text-white text-xl font-sans leading-none stylesf-button">Today</label>
+                            </div>
+                          </div>
+                        
+                        
+                          <div class="w-full flex gap-1">
+                            <div id="button-yesteday" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                              <label class="text-white text-xl font-sans leading-none stylesf-button">Yesterday</label>
+                            </div>
+                            
+                            <div class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                              <label class="text-white text-xl font-sans leading-none stylesf-button">Week</label>
+                            </div>
+                          </div>
+                        
+                        
+                          <div class="w-full h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                            <label class="text-white text-xl font-sans leading-none stylesf-button">Month</label>
+                          </div>
+                        
+                          <div class="w-full h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded rounded-b-lg md:rounded-t-lg md:rounded-b-2xl flex flex-col justify-center items-center gap-2.5 ">
+                            <div class="text-white text-xl font-sans leading-none flex justify-center  items-center">
+                              <label class="text-white text-xl font-sans leading-none stylesf-button flex gap-1 items-center text-center" >
+                        
+                                <svg class="" width="7" height="7" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.866 3.26318L3.354 10.7752L10.866 18.2871" stroke="white" stroke-width="5.63399" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <!-- <div class="flex h-min"><img class="h-auto self-center " src="/img/landing/features-block/arrow.svg" alt="arrow back"></div> -->
+                                <p>Back</p>
+                        
+                              </label>
+                            </div>
+                          </div>
+                        
+                        </div>
+                        
+                        </div>
+                  </div>
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <h4 class="h3-header ">Payment statistics</h4>
+                      <p class="base-text text-opacity-80">Open <a href="#" class="landing-link">@CryptoBot</a>, go to <a href="#" class="landing-link">Crypto Pay</a> and <a href="#" class="landing-link">My Apps</a>, <br class="hidden sm:inline">App Name to get Statistics</p>
+                  </div>
+              </div>
+          
+              <!-- Send Coins to Users -->
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl pb-8 px-8 gap-6 items-center md:col-span-7 md:gap-5 md:pb-[42px] md:px-[10%]    sm:col-span-3">
+                  <!-- Without Padding animation Frame -->
+                  <!-- ANIMATION HERE   -->
+                  <div class="flex flex-col items-center justify-end relative">
+          
+                      <div name="phone-mockup" class="  flex flex-col items-center ">
+                          <img class=" dark:hidden " src="/img/landing/features-block/mockup_light-min.png" alt="">
+                          <img class=" hidden dark:inline " src="/img/landing/features-block/mockup_dark-min.png" alt="">
+          
+                          <div name="notification-bubble" class="absolute w-[67%]">
+                              <div class="light-bubbles dark:hidden">
+                                  <img class="pt-[20%] w-min active-bubble" src="/img/landing/features-block/Mokup/1-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden" src="/img/landing/features-block/Mokup/2-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden" src="/img/landing/features-block/Mokup/3-min.png" alt="">
+                              </div>
+                              <div class="dark-bubbles hidden dark:inline">
+                                  <img class="pt-[20%] w-min active-bubble" src="/img/landing/features-block/Mokup/1-dark-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden" src="/img/landing/features-block/Mokup/2-dark-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden" src="/img/landing/features-block/Mokup/3-dark-min.png" alt="">
+                              </div>
+                          </div>
+                      </div>
+          
+                  </div>
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <h4 class="h3-header ">Send coins to users</h4>
+                      <p class="base-text text-opacity-80">Automate payouts to users with <a href="#" class="landing-link">transfer</a> API method</p>
+                  </div>
+              </div>
+          
+              <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 gap-6 items-center sm:p-[42px] sm:gap-5 md:px-[10%] md:col-span-5 sm:col-span-3">
+          
+                  <div class="w-full h-full font-mono ">
+                      <div class="bg-gradient-to-tr from-[#0974F1] to-[#9FCCFA] rounded-preset flex justify-center items-center h-full px-5 py-10">
+                          <img class="" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 1 of Anonymous payments">
+                          <img class="hidden" src="/img/landing/features-block/anonpayments/2.png" alt="Illustration 2 of Anonymous payments">
+                          <img class="hidden" src="/img/landing/features-block/anonpayments/3.png" alt="Illustration 3 of Anonymous payments">
+                          <!-- ANIMATION HERE   -->
+                      </div>
+                  </div>
+                  
+                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                      <h4 class="h3-header">Anonymous<br>payments</h4>
+                      <p class="base-text text-opacity-80">Use <span class="font-medium">allow_anonymous</span> parameter in <a href="#" class="landing-link">createInvoice</a> method to give user an option to remain private</p>
+                  </div>
+              </div>
+          
+          </section>
+        </div>  
+    
+        <!-- <SectionInstruction  /> -->
+        <section id="instruction-block" class="py-8 sm:py-[120px] bg-[#F7F9FB] dark:bg-dark181">
+          <div class="max-w-7xl mx-auto px-5 sm:px-10">
+          
+          
+          <div name="content" class="flex flex-col gap-6 sm:gap-10">
+              <h2 class="h2-header lg:h2-header-lg text-center text-[#252525] dark:text-white">
+                  Quick start using <br class="md:hidden"><span class="text-general">Crypto Pay</span>
+              </h2>
+          
+              <div name="step-one" class="flex flex-wrap gap-4 justify-center items-center sm:grid sm:grid-cols-12 sm:justify-between ">
+                  <div name="step-pic" class="sm:col-span-6 sm:order-2 w-full">
+          
+                      <!-- <img src="/img/landing/instruction-block/img_step_3.png" alt=""> -->
+          
+                      <!-- here_new_css_styled_pic3 -->
+                      <div class="flex flex-col w-full h-full bg-gradient-to-tl from-[#8EC5FC] to-[#E0C3FC] rounded-3xl md:rounded-[40px] py-[20%] md:py-[20%] justify-center max-w-[335px] max-h-[335px] md:max-w-[590px] md:max-h-[488px] mx-auto">
+                          <div name="wrapper" class="flex flex-col w-fit h-min gap-1 mx-auto ">
+          
+                              <!-- <img src="/img/landing/instruction-block/step1-img.png" alt=""> -->
+                              <!-- LandingFrameImgStep1 -->
+                              <div name="LandingFrameImgStep1">
+                                <div class=" w-min mx-auto flex flex-col gap-1">
+                              
+                                  <div class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-bl-lg rounded-br-lg flex flex-col justify-start items-start relative cursor-default">
+                                    <div class="  text-xl font-normal font-sans stylesf-message break-words leading-5">
+                                      Here is the token for the app <b>@GoodsBot</b><br>
+                                      <br>
+                                      114935:AA9xMcRqHYZYl6CQlkhBStMAwT<br>FQ1s6iJHM<br>
+                                      <br>
+                                      ⚠️ This token can be used by anyone to control your app. Keep and store it safely.
+                                    </div>
+                                    <!-- <div class="self-end text-right text-neutral-900 text-opacity-40 text-sm font-sans leading-tight test-2">21:30</div> -->
+                                    <!-- <div class="self-end text-right text-neutral-900 text-opacity-40 text-sm sm:text-base font-sans leading-tight absolute bottom-0.5 right-1 p-2">
+                                      21:30
+                                    </div> -->
+                                    <div class="stylesf-message-time self-end text-right mt-[0.3rem]">21:30</div>
+                                  </div>
+                              
+                                  <div class="w-full h-fit py-[0.6rem] lg:py-4 md:py-3 bg-[#8198D1] bg-opacity-80 rounded-lg md:rounded-b-2xl rounded-b-xl  sm:rounded-[] flex flex-col justify-center items-center gap-2.5">
+                                    <label class="text-white text-xl font-sans leading-none stylesf-button">Revoke Token</label>
+                                  </div>
+                              
+                                </div>
+                              </div>
+                              
+          
+                          </div>
+                      </div>
+          
+          
+                  </div>
+                  <div class="sm:col-span-1 sm:order-1"></div>
+                  <div name="header-text" class="flex flex-col items-center sm:gap-5 sm:justify-center sm:col-span-5 sm:items-end">
+                      <div name="step-n" class="flex gap-4 sm:flex-col sm:gap-5 base-text w-full">
+                          <div class="w-9 h-9 md:w-16 md:h-16 bg-step-circle dark:bg-step-circle-darkmode rounded-full cursor-default  flex justify-center items-center text-center ">
+                              <p class="h3-header text-white dark:text-[#0D0D12]">1</p>
+                          </div>
+                          <div name="step-n-h3-text" class="flex flex-col gap-4 base-text">
+                              <h3 class="h3-header">Authorizing your app</h3>
+                              <div name="step-n-description" class="flex flex-col gap-2">
+                                  <ol class="list-inside list-decimal flex flex-col gap-2 base-text text-opacity-80">
+                                      <li>Open <a class="landing-link">@CryptoBot</a> </li>
+                                      <li>Go to <a class="landing-link">Crypto Pay</a></li>
+                                      <li>Tap <a class="landing-link">Create App</a></li>
+                                      <li>Get <a class="landing-link">API Token</a></li>
+                                  </ol>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          
+              <div name="step-two" class="flex flex-wrap gap-4 justify-center items-center sm:grid sm:grid-cols-12 sm:justify-between ">
+                  <div name="step-pic" class="sm:col-span-6 w-full">
+                      <!-- <img src="/img/landing/instruction-block/img_step_2.png" alt=""> -->
+                      <!-- here_new_css_styled_pic2 -->
+                      <div class="flex flex-col w-full h-full bg-gradient-to-tr from-[#FFECD2] to-[#FCB69F] rounded-3xl md:rounded-[40px] py-[20%] md:py-[30%] justify-center max-w-[335px] max-h-[335px] md:max-w-[590px] md:max-h-[488px] mx-auto">
+                          <div name="wrapper" class="flex flex-col w-fit h-min gap-1 mx-auto ">
+                              <div class=" bg-[#0D0D12] rounded-xl p-4">
+                                  <p class=" font-mono stylesf-mono text-white">asset<span class="text-[#5DB0E2]">=</span><span class="text-[#FCEF8F]">TON</span><span class="text-[#D46565]">&</span>amount<span class="text-[#5DB0E2]">=</span><span class="text-[#FCEF8F]">2.75</span><br>{"asset":<span class="text-[#5DB0E2]">"TON"</span>, "amount": <span class="text-[#5DB0E2]">"2.75"</span>}</p>
+                              </div>
+                          </div>
+                      </div>
+          
+                  </div>
+                  <div class="sm:col-span-1"></div>
+                  <div name="header-text" class="flex flex-col items-center sm:gap-5 sm:justify-center sm:col-span-5 sm:items-end">
+                      <div name="step-n" class="flex gap-4 sm:flex-col sm:gap-5 base-text">
+                          <div class="w-9 h-9 md:w-16 md:h-16 bg-step-circle dark:bg-step-circle-darkmode rounded-full cursor-default  flex justify-center items-center text-center shrink-0 ">
+                              <p class="h3-header text-white dark:text-[#0D0D12]">2</p>
+                          </div>
+                          <div name="step-n-h3-text" class="flex flex-col gap-4 base-text">
+                              <h3 class="h3-header">Crypto Pay <br class="sm:hidden">API Request</h3>
+                              <p class="base-text text-opacity-80">Requests are only served over HTTPS <br>To pass parameters use:</p>
+                              <div name="step-n-description" class="flex flex-col gap-2 base-text ">
+                                  <a class="landing-link">URL query string</a>
+                                  <a class="landing-link">application/json </a>
+                                  <a class="landing-link">application/x-www-form-urlencoded</a>
+                                  <a class="landing-link">multipart/form-data</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div name="step-three" class="flex flex-wrap gap-4 justify-center items-center sm:grid sm:grid-cols-12 sm:justify-between ">
+                  <div name="step-pic" class="sm:col-span-6 sm:order-2 w-full">
+                      <!-- <img src="/img/landing/instruction-block/img_step_3.png" alt=""> -->
+                      <!-- here_new_css_styled_pic3 -->
+                      <div class="flex flex-col w-full h-full bg-gradient-to-t from-[#C2E9FB] to-[#A1C4FD] rounded-3xl md:rounded-[40px] py-[20%] md:py-[30%] justify-center max-w-[335px] max-h-[335px] md:max-w-[590px] md:max-h-[488px] mx-auto">
+                          <div name="wrapper" class="flex flex-col w-fit h-min gap-1 mx-auto">
+                              <div class="  bg-[#0D0D12] rounded-xl lg:rounded-[1.3rem] p-4 text-white">
+                                  <p class=" font-mono stylesf-mono"><span class="text-[#61BAEF]">Invoice(</span><br>&nbsp;&nbsp;<span class="text-[#61BAEF]">payload:</span> “item:monthly_premium”,<br>&nbsp;&nbsp;<span class="text-[#61BAEF]">status:</span>  “paid”,<br>&nbsp;&nbsp;<span class="text-[#61BAEF]">amount:</span> “3.99”,<br>&nbsp;&nbsp;<span class="text-[#61BAEF]">asset:</span>   “USDT”<br>)</p>
+                              </div>
+                          </div>
+                      </div>
+          
+          
+                  </div>
+                  <div class="sm:col-span-1 sm:order-1"></div>
+                  <div name="header-text" class="flex flex-col items-center sm:gap-5 sm:justify-center sm:col-span-5 sm:items-end">
+                      <div name="step-n" class="flex gap-4 sm:flex-col sm:gap-5 base-text w-full">
+                          <div name="step-n-circle">
+                              <div class="w-9 h-9 md:w-16 md:h-16 bg-step-circle dark:bg-step-circle-darkmode rounded-full cursor-default  flex justify-center items-center text-center ">
+                                  <p class="h3-header text-white dark:text-[#0D0D12]">3</p>
+                              </div>
+          
+                          </div>
+                          <div name="step-n-h3-text" class="flex flex-col gap-4 base-text">
+                              <h3 class="h3-header">Getting updates</h3>
+                              <p class="base-text text-opacity-80">There are two ways of receiving <br class="inline">updates for your app:</p>
+                              <div name="step-n-description" class="">
+                                  <ul class=" list-inside list-disc flex flex-col gap-2 base-text text-opacity-80">
+                                      <li class="text-general"><span class="base-text text-opacity-80"><a class="landing-link">getInvoices</a> method to get a <br class="sm:hidden">list of created invoices.</span></li>
+                                      <li class="text-general"><span class="base-text text-opacity-80"><a class="landing-link">Webhooks</a> to receive <br class="sm:hidden">updates in realtime.</span></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+          </div>
+          
+          </div>
+        </section>
+    
+        <!-- yBlockAPI max-w-7xl mx-auto px-5 sm:px-10 -->
+        <div name="BlockAPI" class="max-w-7xl mx-auto px-5 sm:px-10">
+          <section class="px-5 py-20 sm:py-[7.5rem]"> <!-- py20 от ручного замера на моб 80px! desktop120px -->
+            <div class="api-block-pic-mobile z-20 sm:api-block-pic relative flex flex-col gap-6 sm:gap-8 justify-end sm:justify-center h-[515px] sm:h-[550px] rounded-2xl sm:rounded-[40px] px-8 py-7 sm:px-20 text-white  ">
+                <h2 class="h2-header sm:h2-header-lg">Crypto Pay API</h2>
+                <p class="sm:w-[408px] base-text text-white">Explore available methods and types<br class="hidden sm:inline">and integrate them in any programming language.</p>
+                <a class="btn-outline text-center sm:w-fit">Open Api Docs</a>
+            </div>
+        </section>
+        </div>
+
+        <!-- yBlockDevCommunity -->
+        <section class="pt-3 pb-10 sm:pt-6 sm:pb-20 rounded-b-[1.5rem] sm:rounded-b-[2.5rem] z-10">
+          <div class="flex flex-col gap-6 min-h-min items-center flex-wrap mx-4 sm:mx-10">
+              <div class="sm:max-w-[62rem]  w-full flex flex-col items-center gap-6 sm:gap-10">
+      
+                  <div class="flex flex-col items-center gap-6 text-[#111111] text-opacity-80">
+                      <h2 class="h2-header sm:h2-header-lg dark:text-white ">Join dev community</h2>
+                      <p class="base-text sm:base-text-lg text-center max-w-xs sm:max-w-md md:max-w-xl">
+                          Connect with bot developers and explore the possibilities
+                          our crypto payments service unlocks.
+                      </p>
+                  </div>
+      
+                  <div name="libraries-icons" class="grid grid-cols-3 gap-x-3 gap-y-6 px-4 pb-4 md:flex md:flex-1 md:gap-6 w-full sm:justify-between items-start ">
+                      
+                      <div name="library-1" class="flex flex-col justify-center items-center gap-4">
+                          <div name="js" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full p-2 bg-gradient-to-tl from-[#74BE1A] to-[#83CD29]">
+                              <svg width="100%" height="100%" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M71.082 18.9588L43.5214 2.95563C41.7832 1.96563 39.5201 1.96563 37.7682 2.95563L9.91322 18.9588C8.11947 19.9906 6.8501 21.93 6.8501 24.0044V55.9681C6.8501 58.0425 8.1526 59.9825 9.94635 61.02L17.3057 65.2C20.8232 66.9325 22.0663 66.9325 23.667 66.9325C28.8751 66.9325 31.8501 63.7831 31.8501 58.29V26.7338C31.8501 26.2881 31.6182 25.625 31.1807 25.625H27.6663C27.2213 25.625 26.2251 26.2881 26.2251 26.7331V58.2894C26.2251 60.7244 24.0226 63.1475 19.9063 61.0894L12.302 56.7063C12.037 56.5625 11.8501 56.2731 11.8501 55.9681V24.0044C11.8501 23.7031 12.197 23.4006 12.4638 23.2463L40.2288 7.27063C40.4882 7.12376 40.8695 7.12376 41.1282 7.27063L68.5545 23.2425C68.817 23.4006 68.7245 23.6938 68.7245 24.0044V55.9681C68.7245 56.2731 68.8388 56.57 68.5795 56.7169L41.0257 72.7019C40.7895 72.8438 40.4963 72.8438 40.2376 72.7019L33.1707 68.4838C32.9576 68.36 32.7045 68.3156 32.5001 68.43C30.5338 69.5444 30.1713 69.6925 28.327 70.3319C27.8732 70.49 27.2038 70.7644 28.5832 71.5375L37.832 77.0088C38.715 77.5188 39.7167 77.7873 40.7364 77.7875C41.7626 77.7875 42.7676 77.5213 43.6532 77.0088L71.0813 61.02C72.8751 59.975 73.7251 58.0425 73.7251 55.9681V24.0044C73.7251 21.93 72.8751 19.9956 71.082 18.9588ZM49.2938 50.9031C41.9651 50.9031 40.3507 48.8813 39.8126 45.2369C39.7501 44.8444 39.417 44.375 39.0176 44.375H35.4357C34.9926 44.375 34.6363 44.9125 34.6363 45.3538C34.6363 50.02 37.1732 55.6738 49.2945 55.6738C58.0688 55.6738 63.0995 52.2644 63.0995 46.2306C63.0995 40.2481 59.0576 38.6781 50.5482 37.5519C41.947 36.415 41.0732 35.8406 41.0732 33.8256C41.0732 32.1644 41.8132 29.9488 48.182 29.9488C53.8726 29.9488 55.9701 31.17 56.8332 35.0056C56.907 35.3663 57.2363 35.625 57.6082 35.625H61.2045C61.4257 35.625 61.637 35.5356 61.792 35.3775C61.942 35.2075 62.0213 34.9944 62.0013 34.7656C61.4445 28.1606 57.0563 25.0825 48.1813 25.0825C40.287 25.0825 35.5776 28.4163 35.5776 34.0044C35.5776 40.0656 40.2632 41.7406 47.8413 42.49C56.907 43.3788 57.612 44.7038 57.612 46.4869C57.612 49.5838 55.1257 50.9031 49.2938 50.9031Z" fill="white" />
+                              </svg>
+                          </div>
+                          <p class="base-text">crypto-pay-api</p>
+                      </div>
+      
+                      <div name="library-2" class="flex flex-col justify-center items-center gap-4">
+                          <div name="net" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full p-2 bg-gradient-to-tl from-[#552D85] to-[#6B3FA0]">
+                              <svg width="100%" height="100%" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M3.08733 27.1305C2.75745 27.139 2.42917 27.0818 2.12161 26.9622C1.81406 26.8426 1.53337 26.663 1.29588 26.4339C1.06051 26.2128 0.872917 25.9459 0.744684 25.6496C0.61645 25.3532 0.550293 25.0337 0.550293 24.7108C0.550293 24.388 0.61645 24.0685 0.744684 23.7721C0.872917 23.4758 1.06051 23.2089 1.29588 22.9878C1.53132 22.7542 1.81109 22.57 2.11874 22.4461C2.42639 22.3222 2.75571 22.2611 3.08733 22.2663C3.42103 22.2594 3.75271 22.3197 4.06261 22.4437C4.37252 22.5677 4.65431 22.7527 4.89122 22.9878C5.1299 23.2069 5.32046 23.4732 5.45082 23.7698C5.58118 24.0664 5.64849 24.3869 5.64849 24.7108C5.64849 25.0348 5.58118 25.3553 5.45082 25.6519C5.32046 25.9485 5.1299 26.2148 4.89122 26.4339C4.65225 26.6645 4.36953 26.845 4.05972 26.9646C3.74991 27.0843 3.41929 27.1407 3.08733 27.1305ZM31.2156 26.7324H26.6374L14.5949 7.72318C14.293 7.25197 14.0388 6.75188 13.836 6.23031H13.7241C13.856 7.40728 13.9058 8.592 13.8733 9.77589V26.7324H9.8177V0.868408H14.6944L26.401 19.4298C26.8987 20.2011 27.2097 20.6739 27.359 21.0222H27.4212C27.2804 19.8667 27.2222 18.7026 27.247 17.5388V0.868408H31.2778L31.2156 26.7324ZM50.9215 26.7324H36.7641V0.868408H50.3617V4.51351H40.9441V11.841H49.6525V15.4612H40.9441V23.1122H50.8966L50.9215 26.7324ZM71.0504 4.51351H63.7975V26.7324H59.605V4.51351H52.377V0.868408H71.038L71.0504 4.51351Z" fill="white" />
+                              </svg>
+                          </div>
+                          <p class="base-text">CryptoPay</p>
+                      </div>
+      
+                      <div name="library-3" class="flex flex-col justify-center items-center gap-4">
+                          <div name="php" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full  p-2  bg-gradient-to-tl from-[#5979AE] to-[#6181B6]">
+                              <svg width="100%" height="100%" viewBox="0 0 71 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M21.5103 23.7392C20.3648 24.8108 19.0928 25.2532 17.6919 25.7089C16.2911 26.1653 14.5084 26.0711 12.3407 26.0711H7.42786L6.06629 33.9278H0.330078L5.44875 7.21487H16.4796C19.7983 7.21487 22.219 8.16946 23.7408 9.9113C25.2627 11.6531 25.7199 14.1257 25.1134 17.2471C24.8628 18.5333 24.4409 19.7291 23.8453 20.7945C23.2282 21.8937 22.44 22.8877 21.5103 23.7392ZM38.2538 26.0711L40.5173 14.7416C40.775 13.4154 40.6807 12.4302 40.2337 11.9486C39.7859 11.4662 38.8336 11.1432 37.3778 11.1432H32.8287L29.8974 26.0711H24.2059L29.3246 0.143799H35.016L33.6553 7.21487H38.7252C41.9158 7.21487 44.1157 7.85519 45.3264 8.96771C46.5372 10.0802 46.9002 11.6044 46.4162 14.0966L44.0348 26.0711H38.2538ZM69.8843 17.2888C69.6344 18.5749 69.2117 19.7503 68.617 20.8149C68.0214 21.8811 67.2436 22.8561 66.2827 23.7392C65.1372 24.8108 63.8644 25.2532 62.4644 25.7089C61.0643 26.1653 59.28 26.0711 57.1124 26.0711H52.1995L50.8387 33.9278H45.1025L50.2204 7.21487H61.2521C64.5708 7.21487 66.9914 8.16946 68.5125 9.9113C70.0328 11.6531 70.4908 14.1681 69.8843 17.2888ZM59.0781 11.1432H55.1489L53.0064 22.1427H56.4964C58.8078 22.1427 60.5316 21.9148 61.663 21.0427C62.7959 20.1722 63.5588 18.8209 63.9556 16.7836C64.3358 14.8265 64.163 13.2999 63.437 12.4954C62.7103 11.6909 61.2576 11.1432 59.0781 11.1432ZM14.3064 11.1432H10.3765L8.23396 22.1427H11.7231C14.0354 22.1427 15.7584 21.9148 16.8905 21.0427C18.0227 20.1722 18.7864 18.8209 19.1823 16.7836C19.5626 14.8265 19.3898 13.2999 18.6638 12.4954C17.9378 11.6909 16.4859 11.1432 14.3064 11.1432Z" fill="white"/>
+                              </svg>
+                          </div>
+                          <p class="base-text">crypto-pay-api</p>
+                      </div>
+      
+      
+                      <div name="library-4" class="flex flex-col justify-center items-center gap-4">
+                          <div name="python" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full  p-2 bg-gradient-to-tl from-[#18181D] to-[#242429]">
+                              <svg width="100%" height="100%" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M36.8463 7.91916C34.3922 7.93079 32.0498 8.13946 29.9875 8.50449C23.9134 9.57748 22.8114 11.8234 22.8114 15.966V21.4362H37.1642V23.2596H17.4243C13.2532 23.2596 9.60064 25.7665 8.45789 30.5375C7.13961 36.0041 7.08148 39.4161 8.45789 45.1246C9.47799 49.3741 11.9146 52.4013 16.0863 52.4013H21.0217V45.8436C21.0217 41.1058 25.1201 36.9272 29.9881 36.9272H44.3247C48.3156 36.9272 51.5008 33.6408 51.5008 29.6336V15.9666C51.5008 12.0763 48.2191 9.15433 44.3247 8.50507C41.8579 8.0947 39.2998 7.90812 36.8463 7.91916V7.91916ZM29.0842 12.3187C30.5664 12.3187 31.7778 13.5492 31.7778 15.0628C31.7778 16.57 30.567 17.7888 29.0842 17.7888C27.5962 17.7888 26.3913 16.57 26.3913 15.0628C26.3907 13.5492 27.5962 12.3187 29.0842 12.3187V12.3187Z" fill="#386F9F"/>
+                                  <path d="M53.2907 23.2594V29.6334C53.2907 34.574 49.101 38.7329 44.3243 38.7329H29.9877C26.0607 38.7329 22.8115 42.0943 22.8115 46.0271V59.6952C22.8115 63.5844 26.1933 65.8728 29.9877 66.9882C34.5307 68.3233 38.8878 68.5651 44.3243 66.9882C47.9373 65.9414 51.5004 63.8361 51.5004 59.6952V54.2245H37.1644V52.4005H58.6777C62.8488 52.4005 64.4042 49.4913 65.8551 45.1238C67.3535 40.6278 67.289 36.3039 65.8551 30.5367C64.8239 26.3836 62.8552 23.2588 58.6777 23.2588H53.2907V23.2594ZM45.227 57.8712C46.7156 57.8712 47.9205 59.0901 47.9205 60.5985C47.9205 62.1109 46.715 63.3414 45.227 63.3414C43.7448 63.3414 42.534 62.1109 42.534 60.5985C42.534 59.0901 43.7448 57.8712 45.227 57.8712V57.8712Z" fill="#FFCF46"/>
+                              </svg>
+                          </div>
+                          <p class="base-text">aiocryptopay</p>
+                      </div>
+      
+                      <div name="library-5" class="flex flex-col justify-center items-center gap-4 text-center">
+                          <div name="go" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full  p-2 bg-gradient-to-tl from-[#00A8D3] to-[#00ACD7]">
+                              <svg width="100%" height="100%" viewBox="0 0 83 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36634 9.91975C6.20524 9.91975 6.16546 9.83887 6.24568 9.71888L7.08964 8.6336C7.1692 8.51294 7.37074 8.43272 7.53118 8.43272H21.8758C22.0369 8.43272 22.0767 8.55338 21.9965 8.67404L21.3136 9.71888C21.2334 9.83887 21.0325 9.95953 20.9118 9.95953L6.36634 9.91975ZM0.298867 13.6158C0.138429 13.6158 0.0979883 13.5362 0.178207 13.4149L1.02216 12.3303C1.10238 12.2096 1.30326 12.1294 1.46436 12.1294H19.7861C19.9466 12.1294 20.0274 12.2501 19.987 12.3707L19.6655 13.3347C19.6257 13.4958 19.4646 13.576 19.3041 13.576L0.298867 13.6158ZM10.0219 17.3125C9.86151 17.3125 9.82173 17.1918 9.90195 17.0712L10.4641 16.0668C10.545 15.9461 10.7055 15.8261 10.8666 15.8261H18.9017C19.0628 15.8261 19.143 15.9461 19.143 16.1072L19.0635 17.0712C19.0635 17.2323 18.9024 17.3529 18.7817 17.3529L10.0219 17.3125ZM51.7292 9.19646C49.1973 9.83954 47.4697 10.3215 44.9789 10.9639C44.3756 11.125 44.3358 11.1648 43.8134 10.5622C43.2108 9.87931 42.7686 9.43711 41.9253 9.03536C39.3934 7.7903 36.9424 8.15162 34.6525 9.63866C31.9204 11.4061 30.5143 14.0176 30.554 17.2721C30.5938 20.4868 32.8041 23.1387 35.9784 23.5809C38.7105 23.9422 41.0011 22.9776 42.809 20.929C43.1703 20.4868 43.4919 20.0048 43.8936 19.442H36.1389C35.2956 19.442 35.0947 18.9195 35.3758 18.2367C35.8982 16.991 36.8622 14.902 37.4244 13.8571C37.5457 13.6158 37.8268 13.214 38.4294 13.214H53.0545C52.9749 14.2993 52.9749 15.3839 52.8138 16.4692C52.3716 19.3617 51.287 22.0136 49.5189 24.3439C46.6257 28.1613 42.8494 30.5314 38.0674 31.1745C34.1301 31.6969 30.4738 30.9332 27.2598 28.5226C24.2863 26.2725 22.5991 23.2991 22.1569 19.6031C21.6345 15.2235 22.92 11.2855 25.5718 7.83008C28.4246 4.0936 32.2015 1.72283 36.8224 0.878872C40.5993 0.196016 44.2151 0.638213 47.4697 2.84788C49.5991 4.25404 51.1259 6.18261 52.1303 8.51294C52.3716 8.87492 52.2112 9.0758 51.7286 9.1958L51.7292 9.19646Z" fill="white"/>
+                                  <path d="M65.0286 31.4159C61.3723 31.335 58.037 30.2908 55.2246 27.8796C52.8539 25.8311 51.3675 23.219 50.8855 20.1249C50.1622 15.5849 51.4073 11.5667 54.14 7.99128C57.073 4.13347 60.6086 2.12468 65.3906 1.28072C69.4884 0.558089 73.3462 0.959847 76.8414 3.32995C80.0156 5.49985 81.984 8.43281 82.5064 12.29C83.1893 17.7144 81.6227 22.1344 77.8855 25.9113C75.2337 28.6029 71.9792 30.2908 68.2427 31.0539C67.1581 31.2548 66.0728 31.2952 65.0286 31.4159ZM74.5913 15.1831C74.5515 14.6607 74.5515 14.259 74.4706 13.8572C73.748 9.87941 70.091 7.6293 66.2743 8.5137C62.5372 9.35699 60.1266 11.7278 59.2429 15.5047C58.5196 18.6385 60.0464 21.8128 62.9389 23.0983C65.1493 24.0629 67.3589 23.9423 69.4884 22.8577C72.6627 21.2102 74.3904 18.6385 74.5913 15.1831Z" fill="white"/>
+                              </svg>
+                          </div>
+                          <p class="base-text">cryptobot-sdk-<br class="lg:inline">golang</p>
+                      </div>
+      
+                      
+                  </div>
+                  <button class="btn sm:btn-lg">Open Devs Chat</button>
+          </div>
+      </div>
+      </section>
+       
+      </main>
+
+      <!-- Footer -->
+
+      <section class="h-[300px] bg-[#232328] -z-20 pt-[6rem] pb-8 sm:pt-[7.5rem] sm:pb-10 mt-[-2.5rem]   ">
+        <div class=" max-w-7xl mx-auto px-5 sm:px-10">
+            <footer class="flex flex-col gap-6 text-white base-text">
+    
+                <!-- aNavigation /> -->
+                <section name="navigation" class="flex justify-between items-center">
+                    <div id="logo">
+                        <a href="#">
+                            <div class="mr-[6rem] w-[2.75rem] md:max-w-[64px] md:w-20">
+                                <svg class="rounded-xl sm:rounded-2xl " viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#44A3DD" points="0 0 64 0 64 64 0 64" />
+                                    <path d="M12.5002858,23 L25.6761004,23 C26.6656866,23 27.5759827,23.5413597 28.0484682,24.4108643 L39.7799231,46 L24.081859,46 C23.0922729,46 22.1819767,45.4586403 21.7094912,44.5891357 L11.1823037,25.2161865 C10.7867648,24.4882851 11.0561979,23.5775568 11.7840993,23.1820179 C12.0039143,23.0625713 12.2501137,23 12.5002858,23 Z" fill="#BEE5F7" />
+                                    <path d="M51.5910069,23 C51.8411791,23 52.0873785,23.0625713 52.3071934,23.1820179 C53.0130373,23.5655707 53.2877777,24.4335625 52.943121,25.1495294 L52.9089891,25.2161865 L42.3818016,44.5891357 C41.9245575,45.4305918 41.0572931,45.9647321 40.1049406,45.9983172 L40.0094337,46 L24.5560452,46 L24.081859,46 L23.9861474,45.9983099 C23.4883845,45.9807184 23.0138729,45.8263853 22.6090091,45.5629027 C22.8118648,45.6793724 23.0414562,45.7544235 23.2863079,45.7765197 C23.3123502,45.7788699 23.522255,45.7983421 23.7558113,45.7356356 C23.8545852,45.7091163 24.2192366,45.6239743 24.6056229,45.2625823 C24.7211639,45.1545153 24.8827176,44.9224567 25.0902842,44.5664065 L36.0428245,24.4108643 C36.5000686,23.5694082 37.367333,23.0352679 38.3196855,23.0016828 L38.4151924,23 L51.5910069,23 Z" fill="#FFFFFF" /></g>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <nav name="bullets" class="base-text ">
+                        <ul class="hidden md:flex gap-8 mr-8">
+                            <li class="text-white"><a href="#usecases-block">Use cases</a></li>
+                            <li class="text-white"><a href="#features-block">Features</a></li>
+                            <li class="text-white"><a href="#instruction-block">How to start</a></li>
+                        </ul>
+                    </nav>
+                    <div name="button-mode">
+                
+                        <div>
+                            <a class="btn-outline">Get started</a>
+                        </div>
+                
+                    </div>
+                </section>
+                <p>©2023 Crypto Bot</p>
+            </footer>
+        </div>
+    </section>
+    
+    </div>
+
+    
+    
+    <script src="/app.js"></script>
+
+    <script>
+
+      const coinwithlabel = document.querySelectorAll("[name='coin-n']");
+      console.log(coinwithlabel)
+
+      const createappbutton = document.querySelector(".createapp-button");
+      const createappcursor = document.querySelector(".createapp-cursor");
+
+      // Usercases JS
+
+      var tl = anime.timeline({
+        autoplay: true,
+        loop: true,
+      });
+
+      tl.add = anime({
+        targets: coinwithlabel,
+        scale: 1.1,
+        duration: 2000,
+        delay: anime.stagger(100)
+      });
+
+      tl.add = anime({
+        targets: ".createapp-button",
+        scale: 1.1,
+        duration: 3000,
+        delay: 5000,
+        
+      });
+
+      // tl.add = anime({
+      //   targets: ".createapp-cursor",
+      //   keyframes: [
+      //     {translateY: -40},
+      //     {translateX: 40},
+      //     {translateY: 30},
+      //     {translateX: 0},
+      //   ],
+      //   easing: 'easeOutElastic(1, .8)',
+      //   duration: 4000,
+        
+      // });
+
+      tl.add = anime({
+        targets: ".button-all-Time .button-today .button-yesteday",
+        
+        
+      });
+
+
+
+
+      
+      
+      console.log('hello')
+
+    </script>
   </body>
 </html>
