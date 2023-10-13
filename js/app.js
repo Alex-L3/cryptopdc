@@ -237,11 +237,13 @@ async function startAnimations(target) {
   const darkBubblesContainer = target.querySelector('.dark-bubbles');
   const anonpaymentsBubblesContainer = target.querySelector('#anon-payments');
 
-  AnimationMessage();
   
-  animateBubbles(lightBubblesContainer);
-  animateBubbles(darkBubblesContainer);
-  animateBubbles(anonpaymentsBubblesContainer);
+  setTimeout(() => AnimationMessage(), 5000);
+  
+  setTimeout(() => animateBubbles(lightBubblesContainer), 18000);
+  setTimeout(() => animateBubbles(darkBubblesContainer), 18000);
+  
+  setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 24000);
 }
 
 const blockfeatures = document.getElementById('features-block');
