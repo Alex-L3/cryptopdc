@@ -12,12 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="/assets/index-80451795.css">
+    <link rel="stylesheet" href="/assets/index-b480fce3.css">
   </head>
   <body>
     
 
-    <div name="root" class=" bg-gray-100 dark:bg-[#0D0D12] mx-auto w-full ">
+    <div name="root" class=" bg-white dark:bg-[#0D0D12] mx-auto w-full ">
 
       <section name="header" class="mx-auto max-w-7xl px-5 sm:px-10 py-[44px] sm:py-[40px]">
 
@@ -205,7 +205,7 @@
 
     
         <div class="mx-auto max-w-7xl px-5 sm:px-10 py-[2rem] lg:py-[7.5rem]">
-          <div class="text-opacity-5 opacity-5 text mb-4 text-center">I'm sorry that the animations aren't all ready yet, they'll be coming soon.</div>
+          
           <!-- SectionFeatures -->
             <section id="features-block" class="flex flex-col gap-4 md:grid md:grid-cols-12 md:gap-5  max-w-md mx-auto sm:max-w-max   sm:grid sm:grid-cols-6">
 
@@ -494,6 +494,24 @@
                             <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
                           
                           </div>
+
+
+                           <!-- screenshot-4-reserve-for-slideback -->
+            
+                           <div id="screenshot-4" class="hidden w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg  flex-col justify-start items-start relative cursor-default">
+                              <div id="message-n-content-reserve" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] ">
+                              Application Statistics <b>@GoodsBot</b> for <b>all time:</b><br>
+                              <br>
+                              Volume: <b>$204,920</b><br>
+                              The number of created invoices: <b>16,256</b><br>
+                              Number of payments: <b>9,353</b><br>
+                              Number of users: <b>5,606</b><br>
+                              <br>
+                              Conversion: <b>57%</b>
+                              </div>
+                              <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
+                        
+                            </div>
                         
                           <!-- sf-button-touched  id="message-n-button" -->
                           <div class="w-full flex gap-1 ">
@@ -561,11 +579,13 @@
                                   <img class="pt-[20%] w-min active-bubble absolute" src="/img/landing/features-block/Mokup/1-min.png" alt="">
                                   <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/2-min.png" alt="">
                                   <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/3-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/1-min.png" alt="">
                               </div>
                               <div class="dark-bubbles hidden dark:inline">
                                   <img class="pt-[20%] w-min active-bubble absolute" src="/img/landing/features-block/Mokup/1-dark-min.png" alt="">
                                   <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/2-dark-min.png" alt="">
                                   <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/3-dark-min.png" alt="">
+                                  <img class="pt-[20%] w-min hidden absolute" src="/img/landing/features-block/Mokup/1-dark-min.png" alt="">
                               </div>
                           </div>
                       </div>
@@ -586,6 +606,7 @@
                           <img class="absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 1 of Anonymous payments">
                           <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/2.png" alt="Illustration 2 of Anonymous payments">
                           <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/3.png" alt="Illustration 3 of Anonymous payments">
+                          <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 3 of Anonymous payments">
                           <!-- ANIMATION HERE   -->
                       </div>
                   </div>
@@ -892,38 +913,19 @@
       //   message.attributes.
       // })
 
-      function AnimationMessage() {
-        const messages = document.querySelectorAll('#message-n-content');
-        const labels = document.querySelectorAll('#button-label');
-        const buttons = document.querySelectorAll('.button-sf');
+      
 
-        let i = 0;
-        setInterval(() => {
-          var orig = messages[0].innerHTML;
-          messages[0].innerHTML = messages[i].innerHTML;
-          labels[i].innerHTML = "· " + labels[i].innerHTML + " ·";
-          buttons[i].classList.add('sf-button-touched');
-
-          i++
-
-          try {
-            buttons[i-2].classList.remove('sf-button-touched');
-            labels[i-2].innerHTML = labels[i-2].innerHTML.split('·')[1]
-          } catch { }
-
-          if (i === 3) {
-            messages[0].innerHTML = messages[0].innerHTML
-          }
-
-        }, 2000);
-   
-        
-      }
-      AnimationMessage();
 
       function ShuffleCoins(){
         const leftgroupicons = document.querySelectorAll(".l-coin");
-        console.log(leftgroupicons)
+        // console.log(leftgroupicons)
+        // leftgroupicons[0].classList.add('order-1')
+        // leftgroupicons[1].classList.add('order-2')
+        // leftgroupicons[2].classList.add('order-0')
+               
+        // var tl3 = anime.timeline({autoplay: true, loop: false,});
+        // tl3.add
+        
         // leftgroupicons[0].classList.add('order-2')
         // leftgroupicons[1].classList.add('order-1')
         // leftgroupicons[2].classList.add('order-0')

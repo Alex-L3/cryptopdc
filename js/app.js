@@ -96,7 +96,7 @@ function animateBubbles(bubblesContainer) {
       anime({
         targets: bubbles[index],
         scale: 1.0,
-        delay: 800,
+        delay: 500,
         duration: 900,
         easing: 'easeInQuad'
       });
@@ -153,6 +153,49 @@ const anonpaymentsBubblesContainer = document.querySelector('#anon-payments');
 // animateBubbles(anonpaymentsBubblesContainer)
 
 
+
+function AnimationMessage() {
+  const messages = document.querySelectorAll('#message-n-content');
+  const labels = document.querySelectorAll('#button-label');
+  const buttons = document.querySelectorAll('.button-sf');
+
+  const messages1 =  messages[0].innerHTML
+
+  let i = 0;
+
+  setInterval(() => {
+
+  const orig = messages[0].innerHTML;
+  if(messages[i]){
+    messages[0].innerHTML = messages[i].innerHTML;
+    labels[i].innerHTML = "· " + labels[i].innerHTML + " ·";
+    buttons[i].classList.add('sf-button-touched');
+  }
+
+  i++
+
+  try {
+    buttons[i-2].classList.remove('sf-button-touched');
+    labels[i-2].innerHTML = labels[i-2].innerHTML.split('·')[1]
+  } catch { }
+
+
+  if(i===4){
+    const firstmessage = document.querySelector('#message-n-content-reserve');
+    messages[0].innerHTML = firstmessage.innerHTML
+    labels[0].innerHTML = "· " + labels[0].innerHTML + " ·";
+    buttons[0].classList.add('sf-button-touched');
+    buttons[2].classList.remove('sf-button-touched');
+    return
+  }
+
+  }, 2000);
+
+}
+
+
+
+
 function animateCoins() {
   const coins = document.querySelectorAll('.l-coin');
 
@@ -163,14 +206,16 @@ function animateCoins() {
     setTimeout(() => {
       // Swap the order with the next coin
       const nextIndex = (index + 1) % coins.length;
-      coin.style.order = initialOrder[nextIndex];
-      coin.style.transition = 'all 1s ease-in-out';
-      coin.style.left = '40px'; // Adjust the value to move to the right
+      coins[nextIndex].style.order = initialOrder[index]; // Swap orders
+      coins[nextIndex].style.transition = 'all 1s ease-in-out';
+      coins[nextIndex].style.left = '42px'; // Adjust the value to move to the right
     }, index * 1000); // Delay each coin by 1000ms (1 second)
   });
 }
 
 animateCoins();
+
+
 
 
 
@@ -191,6 +236,8 @@ async function startAnimations(target) {
   const lightBubblesContainer = target.querySelector('.light-bubbles');
   const darkBubblesContainer = target.querySelector('.dark-bubbles');
   const anonpaymentsBubblesContainer = target.querySelector('#anon-payments');
+
+  AnimationMessage();
   
   animateBubbles(lightBubblesContainer);
   animateBubbles(darkBubblesContainer);
