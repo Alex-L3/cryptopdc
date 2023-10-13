@@ -1,19 +1,9 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
 
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 /* font-family: 'SF Pro Display', sans-serif; */
 @import url('https://fonts.cdnfonts.com/css/sf-mono');
 /* font-family: 'SF Mono', sans-serif; */
-
-@font-face {
-    font-family: 'YourFont';
-    src: url('https://your-cdn.com/path/to/font.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Swap to custom font once available */
-}
-
 
 @tailwind base;
 @tailwind components;
@@ -24,25 +14,25 @@
     html {
         scroll-behavior: smooth;
     }
-
+ 
 }
 
 @layer components {
 
     .landing-link {
-        @apply text-general hover:underline hover:text-deepblue cursor-pointer
+        @apply text-general hover:underline hover:text-deepblue cursor-pointer hover:transition-all ease-in duration-100
     }
 
     .btn {
-        @apply bg-general hover:bg-[#297EE2] text-white cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] 
+        @apply bg-general hover:bg-[#297EE2] text-white cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] hover:transition-all ease-in duration-200
     }
 
     .btn-secondary {
-        @apply text-deepblue bg-deepblue bg-opacity-[12%] hover:bg-opacity-[16%] cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%]
+        @apply text-deepblue bg-deepblue bg-opacity-[12%] hover:bg-opacity-[16%] cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] hover:transition-all ease-in duration-200
     }
 
     .btn-outline {
-        @apply text-white outline outline-1 outline-white/60 hover:outline-white/100 cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] whitespace-nowrap
+        @apply text-white outline outline-1 outline-white/60 hover:outline-white/100 cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] whitespace-nowrap hover:transition-all ease-in duration-200
     }
 
 
@@ -260,5 +250,11 @@
     .cursor-position {
         transform: translateX(40px);
     }
+
+    .createapp-cursor {
+        @apply translate-x-7
+    }
+
+ 
 
 }

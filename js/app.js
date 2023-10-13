@@ -79,54 +79,116 @@ startAutoSlide(); // Start auto-sliding when the page loads
 
 
 
-
 /* Features Animaion Frames */
 
 
-// Function to animate bubbles Phone Mockup
+// Function to animate bubbles
+
 function animateBubbles(bubblesContainer) {
-    const bubbles = bubblesContainer.querySelectorAll('img');
-  
-    bubbles.forEach((bubble, index) => {
-      const timeline = anime.timeline({
-        autoplay: true,
-        loop: true,
+  const bubbles = bubblesContainer.querySelectorAll('img');
+  let index = 0;
+
+  function showBubble() {
+
+    if (index == bubbles.length){
+      bubbles[0].style.display = 'inline';
+
+      anime({
+        targets: bubbles[index],
+        scale: 1.0,
+        delay: 800,
+        duration: 900,
+        easing: 'easeInQuad'
       });
-  
-      timeline.add({
-        targets: bubble,
+
+    }
+
+    if (index < bubbles.length) {
+      bubbles[index].style.display = 'inline';
+
+      anime({
+        targets: bubbles[index],
+        scale: 0.94,
         opacity: 1,
-        translateY: 0,
-        duration: 1000,
+        translateY: -15,
+        delay: 800,
+        duration: 800,
+        easing: 'easeInQuad'
       });
-      timeline.add({
-        targets: bubble,
-        opacity: 0,
-        translateY: -20,
-        duration: 1000,
-        delay: 2000,
-      });
-    });
+
+      if (index > 0) {
+        // Hide the outgoing bubble
+        bubbles[index - 1].style.display = 'inline';
+        
+        // anime({
+        //   targets: bubbles[index-1],
+        //   scale: 0.95,
+        //   opacity: 1.0,
+        //   translateY: -15,
+        //   delay: 1000,
+        //   duration: 2000,
+        //   direction: ''
+        // });
+      }
+
+      index++;
+      
+      setTimeout(showBubble, 1500); // Adjust the delay (in milliseconds) as needed
+      
+    }
   }
+
+  showBubble();
+}
+
+
+// Light and dark bubble containers and apply the animation
+const lightBubblesContainer = document.querySelector('.light-bubbles');
+const darkBubblesContainer = document.querySelector('.dark-bubbles');
+
+animateBubbles(lightBubblesContainer); // For the light theme
+animateBubbles(darkBubblesContainer);  // For the dark theme
+
+const anonpaymentsBubblesContainer = document.querySelector('#anon-payments');
+animateBubbles(anonpaymentsBubblesContainer)
+
+
+
+function animateCoins() {
+  const coins = document.querySelectorAll('.l-coin');
+  console.log()
   
-  // Get the light and dark bubble containers and apply the animation
-  const lightBubblesContainer = document.querySelector('.light-bubbles');
-  const darkBubblesContainer = document.querySelector('.dark-bubbles');
-  
-  animateBubbles(lightBubblesContainer); // For the light theme
-  animateBubbles(darkBubblesContainer);  // For the dark theme
-
-
-
-  function animateCoins() {
-    const coins = document.querySelectorAll('.l-coin');
-    
-    coins.forEach((coin, index) => {
-        setTimeout(() => {
-            coin.style.transition = 'all 1s ease-in-out';
-            coin.style.left = '40px'; // Adjust the value to move to the right
-        }, index * 1000); // Delay each coin by 1000ms (1 second)
-    });
+  coins.forEach((coin, index) => {
+      setTimeout(() => {
+          coin.style.transition = 'all 1s ease-in-out';
+          coin.style.left = '40px'; // Adjust the value to move to the right
+      }, index * 1000); // Delay each coin by 1000ms (1 second)
+  });
 }
 
 animateCoins()
+
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log('animation start!')
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+
+      FrameAnimation()
+      animateBubbles(lightBubblesContainer); // For the light theme
+      animateBubbles(darkBubblesContainer);
+      animateBubbles(anonpaymentsBubblesContainer)
+
+    } else {
+      entry.target.classList.remove('show');
+    }
+  })
+})
+
+const blockfeatures = document.getElementById('features-block');
+// hideElem.forEach((el) => observer.observe(el));
+observer.observe(blockfeatures)
