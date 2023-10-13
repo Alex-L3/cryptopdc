@@ -146,49 +146,56 @@ function animateBubbles(bubblesContainer) {
 const lightBubblesContainer = document.querySelector('.light-bubbles');
 const darkBubblesContainer = document.querySelector('.dark-bubbles');
 
-animateBubbles(lightBubblesContainer); // For the light theme
-animateBubbles(darkBubblesContainer);  // For the dark theme
+// animateBubbles(lightBubblesContainer); // For the light theme
+// animateBubbles(darkBubblesContainer);  // For the dark theme
 
 const anonpaymentsBubblesContainer = document.querySelector('#anon-payments');
-animateBubbles(anonpaymentsBubblesContainer)
-
+// animateBubbles(anonpaymentsBubblesContainer)
 
 
 function animateCoins() {
   const coins = document.querySelectorAll('.l-coin');
-  console.log()
-  
+
+  // Create an array to store the initial order of the coins
+  const initialOrder = Array.from(coins).map((coin) => coin.style.order);
+
   coins.forEach((coin, index) => {
-      setTimeout(() => {
-          coin.style.transition = 'all 1s ease-in-out';
-          coin.style.left = '40px'; // Adjust the value to move to the right
-      }, index * 1000); // Delay each coin by 1000ms (1 second)
+    setTimeout(() => {
+      // Swap the order with the next coin
+      const nextIndex = (index + 1) % coins.length;
+      coin.style.order = initialOrder[nextIndex];
+      coin.style.transition = 'all 1s ease-in-out';
+      coin.style.left = '40px'; // Adjust the value to move to the right
+    }, index * 1000); // Delay each coin by 1000ms (1 second)
   });
 }
 
-animateCoins()
-
+animateCoins();
 
 
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log('animation start!')
-    console.log(entry)
     if (entry.isIntersecting) {
+      // console.log("here here here")
       entry.target.classList.add('show');
-
-      FrameAnimation()
-      animateBubbles(lightBubblesContainer); // For the light theme
-      animateBubbles(darkBubblesContainer);
-      animateBubbles(anonpaymentsBubblesContainer)
-
+      startAnimations(entry.target);
     } else {
       entry.target.classList.remove('show');
     }
-  })
-})
+  });
+});
+
+async function startAnimations(target) {
+  FrameAnimation(target);
+  const lightBubblesContainer = target.querySelector('.light-bubbles');
+  const darkBubblesContainer = target.querySelector('.dark-bubbles');
+  const anonpaymentsBubblesContainer = target.querySelector('#anon-payments');
+  
+  animateBubbles(lightBubblesContainer);
+  animateBubbles(darkBubblesContainer);
+  animateBubbles(anonpaymentsBubblesContainer);
+}
 
 const blockfeatures = document.getElementById('features-block');
-// hideElem.forEach((el) => observer.observe(el));
-observer.observe(blockfeatures)
+observer.observe(blockfeatures);

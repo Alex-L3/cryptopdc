@@ -734,6 +734,10 @@ html {
   z-index: -20;
 }
 
+.z-0{
+  z-index: 0;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -744,6 +748,14 @@ html {
 
 .-order-1{
   order: -1;
+}
+
+.order-1{
+  order: 1;
+}
+
+.order-2{
+  order: 2;
 }
 
 .col-span-7{
@@ -1209,11 +1221,6 @@ html {
   background-color: rgb(247 249 251 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1535,10 +1542,6 @@ html {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.font-black{
-  font-weight: 900;
 }
 
 .font-medium{
