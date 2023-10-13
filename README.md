@@ -9,4 +9,6 @@
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with mobile devices and tablets.
 
+ [Preview](https://652852ba54425700089a6995--magical-gecko-cef87a.netlify.app/)
+
 ![](/cover.png)
