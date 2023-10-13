@@ -1,0 +1,16 @@
+{
+  "name": "cryptopaylanding",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tailwindcss -i ./input.css -o ./dist/output.css",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@rollup/plugin-html": "^1.0.3",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}

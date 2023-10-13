@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+/* font-family: 'SF Pro Display', sans-serif; */
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+/* font-family: 'SF Mono', sans-serif; */
+
+@font-face {
+    font-family: 'YourFont';
+    src: url('https://your-cdn.com/path/to/font.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Swap to custom font once available */
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+}
+
+@layer components {
+
+    .landing-link {
+        @apply text-general hover:underline hover:text-deepblue cursor-pointer
+    }
+
+    .btn {
+        @apply bg-general hover:bg-[#297EE2] text-white cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] 
+    }
+
+    .btn-secondary {
+        @apply text-deepblue bg-deepblue bg-opacity-[12%] hover:bg-opacity-[16%] cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%]
+    }
+
+    .btn-outline {
+        @apply text-white outline outline-1 outline-white/60 hover:outline-white/100 cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] whitespace-nowrap
+    }
+
+
+
+    .base-text {
+        @apply font-sans text-lg lg:text-xl font-normal leading-6 text-[#0D0D12] dark:text-white
+    }
+
+    .h2-header {
+        /* mobile/H2 header */
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 629;
+        line-height: 110%; /* 35.2px */
+        letter-spacing: -0.96px;
+    }
+
+    .h2-header {
+        @apply md:text-[2.25rem]
+    }
+
+
+    .h2-header-lg {
+        /* desktop/H2 header */
+        font-family: Inter;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 629;
+        line-height: 110%; /* 3.85rem */
+        letter-spacing: -0.105rem;
+    }
+    
+}
+
+
+@layer utilities {
+
+    .h1-header {
+        /* mobile/H1 header */
+        font-family: Inter;
+        font-size: 46px;
+        /* font-style: normal; */
+        font-weight: 629; 
+        line-height: 110%; /* 50.6px */
+        letter-spacing: -1.38px;
+    }
+
+    .h1-header-lg {
+        /* desktop/H1 header */
+        font-family: Inter;
+        font-size: 5rem;
+        /* font-style: normal; */
+        font-weight: 629;
+        line-height: 110%; /* 5.5rem */
+        letter-spacing: -0.15rem;
+    }
+
+    .h3-header {
+        @apply text-[1.75rem] lg:text-[2.625rem];
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 629;
+        line-height: 110%; /* 2.8875rem */
+        letter-spacing: -0.07875rem;
+    }
+
+    .h4-header {
+        @apply self-stretch text-zinc-950 text-3xl font-[629] leading-[110%] tracking-tighter
+    }
+
+    .button-text {
+        /* mobile/Button */
+        font-family: Inter;
+        font-size: 18px;
+        line-height: 120%; /* 21.6px */
+    }
+
+    .button-text {
+        /* mobile/Button */
+        font-family: Inter;
+        font-size: 18px;
+        line-height: 120%; /* 21.6px */
+        @apply text-lg lg:text-xl leading-[120%]
+    }
+
+
+    .button-text-lg {
+        /* desktop/Button */
+        font-family: Inter;
+        font-size: 20px;
+        line-height: 120%; /* 24px */
+    }
+
+    .base-text {
+        /* mobile/Base-text */
+        @apply text-lg lg:text-xl;
+        font-family: Inter;
+        /* font-size: 18px; */
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 21.6px */ 
+    }
+
+    .base-text-lg {
+        /* desktop/Base-text */
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 24px */
+    }
+
+    .bg-step-circle {
+        background: linear-gradient(220deg, #010417 10.26%, #2B333F 84.25%), linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+        box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04), 0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+    }
+
+    .bg-step-circle-darkmode {
+        background: white;
+        box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04), 0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+    }
+
+    .description-text {
+        @apply text-white text-sm font-medium leading-[120%] uppercase self-center ml-px
+    }
+
+    .page-slide-active {
+        @apply opacity-100 bg-general
+    }
+
+    .style-currency {
+        @apply opacity-40 text-[#111111] text-sm font-[Inter] font-medium leading-[120%] dark:text-white dark:opacity-80;
+    }
+
+    .bg-step-circle {
+        background: linear-gradient(220deg, #010417 10.26%, #2B333F 84.25%), linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+        box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04), 0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+    }
+
+    .rounded-preset {
+        border-radius: clamp(24px, calc(1vw + 1vh), 40px);
+    }
+
+    .utils-message-text {
+        /* anonymous payments */
+        font-size: 11.584px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 13.628px; /* 117.647% */
+        letter-spacing: -0.341px;
+    }
+
+    .style-label {
+        @apply opacity-40 text-[#111111] description-text dark:text-white dark:opacity-80
+    }
+
+    .stylesf-message {
+        @apply  xl:leading-[120%] ; 
+        /* leading-[0.75rem] sm:leading-none */
+        font-size: clamp(12px,1.5vw,18px);
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .stylesf-message-time {
+        @apply  leading-none sm:leading-none xl:leading-normal text-neutral-200;
+        font-size: clamp(11px,1.5vw,14px);
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: rgba(17, 17, 17, 0.40);
+    }
+
+    .stylesf-button {
+        font-size: clamp(11px,1.5vw,14px);
+    }
+
+    .sf-button-touched {
+        background: rgba(32, 114, 172, 0.82);
+    }
+
+    .stylesf-mono {
+        /* @apply text-red-700; */
+        font-size: clamp(12px,1.5vw,16px);
+        font-family: 'SF Mono', sans-serif, monospace;
+        font-weight: 400;
+    }
+
+
+    .api-block-pic {
+        background-image:
+        url('img/landing/api-block/APIBlock_Pic-min.png'),
+        url('img/landing/api-block/layer-bg-img.svg'),
+        linear-gradient(233deg, #9FCCFA -20.48%, #0974F1 97.38%);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .api-block-pic-mobile {
+        background-image:
+        url('img/landing/api-block/CoverPic_mobile-min.png'),
+        /* url('img/landing/api-block/layer-mobile-bg-img.svg'), */
+        linear-gradient(220deg, #9FCCFA -32.5%, #0974F1 147.07%);
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+    .active-bubble {
+        @apply inline
+    }
+
+    .cursor-position {
+        transform: translateX(40px);
+    }
+
+}
