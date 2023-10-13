@@ -74,7 +74,9 @@ function startAutoSlide() {
   }, 5000); // Change slides every 5 seconds
 }
 
-// startAutoSlide(); // Start auto-sliding when the page loads
+startAutoSlide(); // Start auto-sliding when the page loads
+
+
 
 
 
@@ -113,3 +115,18 @@ function animateBubbles(bubblesContainer) {
   
   animateBubbles(lightBubblesContainer); // For the light theme
   animateBubbles(darkBubblesContainer);  // For the dark theme
+
+
+
+  function animateCoins() {
+    const coins = document.querySelectorAll('.l-coin');
+    
+    coins.forEach((coin, index) => {
+        setTimeout(() => {
+            coin.style.transition = 'all 1s ease-in-out';
+            coin.style.left = '40px'; // Adjust the value to move to the right
+        }, index * 1000); // Delay each coin by 1000ms (1 second)
+    });
+}
+
+animateCoins()

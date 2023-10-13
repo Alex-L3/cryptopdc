@@ -8,20 +8,6 @@
 
 /* font-family: 'SF Mono', sans-serif; */
 
-@font-face {
-  font-family: 'YourFont';
-
-  src: url('https://your-cdn.com/path/to/font.woff2') format('woff2');
-
-  font-weight: normal;
-
-  font-style: normal;
-
-  font-display: swap;
-
-  /* Swap to custom font once available */
-}
-
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
