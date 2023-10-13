@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/anime.min.js"></script>
     <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-e72bb31d.js"></script>
-    <link rel="stylesheet" href="/assets/index-138ced36.css">
+    <script type="module" crossorigin src="/assets/index-ab38f746.js"></script>
+    <link rel="stylesheet" href="/assets/index-b5f8856c.css">
   </head>
   <body>
     
@@ -319,23 +319,19 @@
               <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 md:py-[42px] gap-6 items-center md:col-span-5  md:row-start-2 md:gap-4  md:px-[10%]    sm:col-span-3">
                   <!-- ANIMATION HERE   -->
                   <!-- LandingFrameCreateApp -->
-                  <section class="flex flex-1 flex-col justify-center items-center ">
+                  <section class="flex flex-1 flex-col justify-center items-center  ">
       
-                      <div class=" w-full relative">
-                  
+                      <div class=" relative ">
                           <!-- light-theme version -->
                           <div name="button-createapp-light" class="flex dark:hidden">
                               <img class="createapp-button" src="/img/landing/features-block/CreateApp.svg"/>
                           </div>
-                  
                           <!-- dark-theme version -->
-                  
                           <div name="button-createapp-dark" class="hidden dark:flex">
                               <img class="createapp-button" src="/img/landing/features-block/CreateApp_dark.svg"/>
                           </div>
                       </div>
-                  
-                      <div id="cursor-smooth" class=" createapp-cursor">
+                      <div id="cursor-smooth" class=" createapp-cursor  ">
                           <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M11.1275 3.64677C6.7178 1.12449 1.36473 4.88154 2.23774 9.88607L7.45908 39.8172C8.51449 45.8673 16.9001 46.6127 19.006 40.8435L22.4947 31.2864C22.782 30.4994 23.5293 29.9749 24.3671 29.9723L34.541 29.9403C40.6824 29.921 42.8322 21.7813 37.5012 18.7321L11.1275 3.64677Z" fill="url(#paint0_linear_129_483)" stroke="#F1F5F9" stroke-width="4"/>
                           <defs>
@@ -347,6 +343,7 @@
                           </svg>
                       </div>
                   
+                      
                   
                   </section>
                   <div class="w-full flex flex-col gap-4 dark:text-white">
@@ -448,6 +445,7 @@
                         <div class="w-full flex flex-col gap-1 max-w-[17rem] sm:max-w-[17rem] lg:max-w-[26rem]  mx-auto">
                         
                           <!-- screenshot-1 -->
+                          
                           <div name="screenshot" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
                             <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] ">
                               Application Statistics <b>@GoodsBot</b> for <b>all time:</b><br>
@@ -464,7 +462,7 @@
                           </div>
                         
                           <!-- screenshot-2 -->
-                          <!-- <div id="screenshot-2" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
+                          <div id="screenshot-2" class=" hidden  w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg  flex-col justify-start items-start relative cursor-default">
                             <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] ">
                               Application Statistics <b>@GoodsBot</b> for <b>today:</b><br>
                               <br>
@@ -476,10 +474,10 @@
                               Conversion: <b>48%</b>
                             </div>
                             <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
-                          </div> -->
+                          </div>
                         
                          <!-- screenshot-3 -->
-                         <!-- <div name="screenshot" class="w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex flex-col justify-start items-start relative cursor-default">
+                         <div name="screenshot" class="hidden   w-full h-fit p-4 bg-white rounded-t-2xl rounded-b-lg flex-col justify-start items-start relative cursor-default">
                             <div name="message-n-content" class="text-xl font-normal font-sans leading-snug stylesf-message xl:leading-[135%] hidden">
                               Application Statistics <b>@GoodsBot</b> for <b>yesterday:</b><br>
                               <br>
@@ -492,22 +490,22 @@
                             </div>
                             <div name="time" class="absolute bottom-0.5 right-1 p-2 stylesf-message-time">21:30</div>
                           
-                          </div> -->
+                          </div>
                         
                           <!-- sf-button-touched  id="message-n-button" -->
                           <div class="w-full flex gap-1 ">
-                            <div id="button-all-Time" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5 sf-button-touched">
+                            <div id="button-all-time" class="button-sf  w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
                               <label class="text-white text-xl font-sans leading-none stylesf-button">All Time</label>
                             </div>
                             
-                            <div id="button-today" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                            <div id="button-today" class="button-sf w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
                               <label class="text-white text-xl font-sans leading-none stylesf-button">Today</label>
                             </div>
                           </div>
                         
                         
                           <div class="w-full flex gap-1">
-                            <div id="button-yesteday" class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                            <div id="button-yesteday" class="button-sf w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
                               <label class="text-white text-xl font-sans leading-none stylesf-button">Yesterday</label>
                             </div>
                             
@@ -871,62 +869,18 @@
     
     
     <script src="/js/app.js"></script>
+    <script src="/js/anim.js"></script>
 
     <script>
 
-      const coinwithlabel = document.querySelectorAll("[name='coin-n']");
-      console.log(coinwithlabel)
-
-      const createappbutton = document.querySelector(".createapp-button");
-      const createappcursor = document.querySelector(".createapp-cursor");
-
-      // Usercases JS
-
-      var tl = anime.timeline({
-        autoplay: true,
-        loop: true,
-      });
-
-      tl.add = anime({
-        targets: coinwithlabel,
-        scale: 1.1,
-        duration: 2000,
-        delay: anime.stagger(100)
-      });
-
-      tl.add = anime({
-        targets: ".createapp-button",
-        scale: 1.1,
-        duration: 3000,
-        delay: 5000,
-        
-      });
-
-      // tl.add = anime({
-      //   targets: ".createapp-cursor",
-      //   keyframes: [
-      //     {translateY: -40},
-      //     {translateX: 40},
-      //     {translateY: 30},
-      //     {translateX: 0},
-      //   ],
-      //   easing: 'easeOutElastic(1, .8)',
-      //   duration: 4000,
-        
-      // });
-
-      tl.add = anime({
-        targets: ".button-all-Time .button-today .button-yesteday",
-        
-        
-      });
-
-
-
-
-      
-      
       console.log('hello')
+
+      const leftgroupicons = document.querySelectorAll("[name='left-group']");
+
+
+      
+      console.log(leftgroupicons)
+
 
     </script>
   </body>
