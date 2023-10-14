@@ -1,16 +1,27 @@
 
-const coinwithlabel = document.querySelectorAll("[name='coin-n']");
-// const coins = document.querySelectorAll("[name='coin-icon']");
+// const coinwithlabel = document.querySelectorAll("[name='coin-n']");
+const coins = document.querySelectorAll("[name='coin-icon']");
 const coinlabels = document.querySelectorAll("[name='coin-n']");
 
+const scaletarget = coins
 
 function FrameAnimation() {
 
   var tl = anime.timeline({autoplay: true, loop: false,});
   var tl2 = anime.timeline({autoplay: true, loop: false,});
+  var tl3 = anime.timeline({autoplay: true, loop: false,}); 
+
+  tl3.add({
+      targets: '.style-currency',
+      delay: anime.stagger(400),
+      opacity: [0.7,0.3],
+      duration: 1500,
+      easing: 'easeInOutQuad',
+      direction: 'alternate',
+  })
   
   tl.add({
-    targets: coinwithlabel,
+    targets: scaletarget,
     scale: 1.1,
     delay: anime.stagger(400),
     duration: 1500
@@ -20,6 +31,7 @@ function FrameAnimation() {
       targets: '.style-currency',
       delay: anime.stagger(400),
       // color: "#111111",
+      // do not delete
       // opacity: 80,
       duration: 1500,
   })

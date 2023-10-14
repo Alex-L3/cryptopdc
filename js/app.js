@@ -154,38 +154,79 @@ const anonpaymentsBubblesContainer = document.querySelector('#anon-payments');
 
 
 
+// function AnimationMessage() {
+  
+//   const messages = document.querySelectorAll('#message-n-content');
+//   const labels = document.querySelectorAll('#button-label');
+//   const buttons = document.querySelectorAll('.button-sf');
+
+//   const messages1 =  messages[0].innerHTML
+//   const labesl1 =  messages[0].innerHTML
+
+//   let i = 0;
+
+//   setInterval(() => {
+
+//   const orig = messages[0].innerHTML;
+//   if(messages[i]){
+//     messages[0].innerHTML = messages[i].innerHTML;
+//     labels[i].innerHTML = "· " + labels[i].innerHTML + " ·";
+//     buttons[i].classList.add('sf-button-touched');
+//   }
+
+//   i++
+
+//   try {
+//     buttons[i-2].classList.remove('sf-button-touched');
+//     labels[i-2].innerHTML = labels[i-2].innerHTML.split('·')[1]
+//   } catch { }
+
+
+//   if(i===4){
+//     const firstmessage = document.querySelector('#message-n-content-reserve');
+//     messages[0].innerHTML = firstmessage.innerHTML
+//     labels[0].innerHTML = "· " + labels[0].innerHTML + " ·";
+//     buttons[0].classList.add('sf-button-touched');
+//     buttons[2].classList.remove('sf-button-touched');
+//     return
+//   }
+
+//   }, 2000);
+
+// }
+
+
 function AnimationMessage() {
+  
   const messages = document.querySelectorAll('#message-n-content');
   const labels = document.querySelectorAll('#button-label');
   const buttons = document.querySelectorAll('.button-sf');
 
-  const messages1 =  messages[0].innerHTML
+  const message_viewport = document.querySelector('#message-viewport');
+
+  const messages1 = messages[0].innerHTML;
+  const orig_lab = labels[0].innerHTML;
 
   let i = 0;
 
   setInterval(() => {
-
-  const orig = messages[0].innerHTML;
-  if(messages[i]){
-    messages[0].innerHTML = messages[i].innerHTML;
+    
+  try{
+    message_viewport.innerHTML = messages[i].innerHTML;
     labels[i].innerHTML = "· " + labels[i].innerHTML + " ·";
     buttons[i].classList.add('sf-button-touched');
-  }
-
+  } catch { }
+ 
   i++
 
   try {
     buttons[i-2].classList.remove('sf-button-touched');
     labels[i-2].innerHTML = labels[i-2].innerHTML.split('·')[1]
-  } catch { }
+  } catch {  }
 
-
-  if(i===4){
-    const firstmessage = document.querySelector('#message-n-content-reserve');
-    messages[0].innerHTML = firstmessage.innerHTML
-    labels[0].innerHTML = "· " + labels[0].innerHTML + " ·";
+  if(i === 4){
     buttons[0].classList.add('sf-button-touched');
-    buttons[2].classList.remove('sf-button-touched');
+    let i = 0;
     return
   }
 
@@ -193,7 +234,7 @@ function AnimationMessage() {
 
 }
 
-
+// AnimationMessage()
 
 
 function animateCoins() {
@@ -213,7 +254,7 @@ function animateCoins() {
   });
 }
 
-animateCoins();
+// animateCoins();
 
 
 
@@ -232,18 +273,20 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 async function startAnimations(target) {
-  FrameAnimation(target);
   const lightBubblesContainer = target.querySelector('.light-bubbles');
   const darkBubblesContainer = target.querySelector('.dark-bubbles');
   const anonpaymentsBubblesContainer = target.querySelector('#anon-payments');
-
   
+  FrameAnimation(target);
+ 
   setTimeout(() => AnimationMessage(), 5000);
   
-  setTimeout(() => animateBubbles(lightBubblesContainer), 18000);
-  setTimeout(() => animateBubbles(darkBubblesContainer), 18000);
+  setTimeout(() => ShuffleCoins(), 14000);
   
-  setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 24000);
+  setTimeout(() => animateBubbles(lightBubblesContainer), 20000);
+  setTimeout(() => animateBubbles(darkBubblesContainer), 20000);
+  
+  setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 26000);
 }
 
 const blockfeatures = document.getElementById('features-block');
