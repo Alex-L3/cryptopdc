@@ -11,4 +11,4 @@
 
 [Preview IV](https://main--magical-gecko-cef87a.netlify.app/)
 
-![](/cover.png)
+![](/cover.jpg)
