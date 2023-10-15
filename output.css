@@ -695,7 +695,7 @@ html {
 
 .h2-header {
   /* mobile/H2 header */
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 629;
@@ -744,14 +744,6 @@ html {
 
 .-order-1{
   order: -1;
-}
-
-.order-1{
-  order: 1;
-}
-
-.order-3{
-  order: 3;
 }
 
 .col-span-7{
@@ -1684,7 +1676,7 @@ html {
 
 .h1-header {
   /* mobile/H1 header */
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 46px;
   /* font-style: normal; */
   font-weight: 629;
@@ -1704,7 +1696,7 @@ html {
 }
 
 .h3-header {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 629;
   line-height: 110%;
@@ -1726,7 +1718,7 @@ html {
 }
 
 .base-text {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   /* font-size: 18px; */
   font-style: normal;
   font-weight: 400;
@@ -1871,10 +1863,57 @@ html {
   translate: 0;
 }
 
+.dino {
+  /* transform: scale(1.4); */
+  animation-duration: 1s;
+  transition: all 1s ease-in-out;
+  animation-name: moveDino;
+}
+
+#l-coin-usdt {
+  order: 1;
+}
+
+#l-coin-btc {
+  order: 2;
+}
+
+#l-coin-ton {
+  order: 3;
+}
+
+@keyframes scaleDino {
+  0% {
+    /* transform: scale(1.0); */
+    transform: translateX(42px);
+  }
+
+  50% {
+    /* transform: scale(1.1); */
+    transform: translateX(21px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveDino {
+  0% {
+    /* transform: scale(1.0); */
+    z-index: 0;
+  }
+
+  25% {
+    /* transform: scale(1.1); */
+    transform: translateX(42px);
+  }
+}
+
 @media (min-width: 640px){
   .sm\:h2-header-lg {
     /* desktop/H2 header */
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 3.5rem;
     font-style: normal;
     font-weight: 629;
@@ -1887,7 +1926,7 @@ html {
 @media (min-width: 1024px){
   .lg\:h2-header-lg {
     /* desktop/H2 header */
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 3.5rem;
     font-style: normal;
     font-weight: 629;
@@ -2267,7 +2306,7 @@ html {
 
   .sm\:base-text-lg {
     /* desktop/Base-text */
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -2616,7 +2655,7 @@ html {
 
   .lg\:h1-header-lg {
     /* desktop/H1 header */
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 5rem;
     /* font-style: normal; */
     font-weight: 629;
