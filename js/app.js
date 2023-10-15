@@ -65,6 +65,14 @@ function showSlide(slideIndex) {
 
 function setSlide(slideIndex) {
   showSlide(slideIndex - 1);
+
+   // Clear existing autoSlideInterval
+   if (autoSlideInterval) {
+    clearInterval(autoSlideInterval);
+  }
+
+  // Start new
+  startAutoSlide();
 }
 
 function startAutoSlide() {
@@ -209,6 +217,21 @@ function animateCoins() {
 // animateCoins();
 
 
+function ShuffleCoins(){
+  const coinicons = document.querySelectorAll(".l-coin");
+  const logos = document.querySelectorAll(".l-coin-icon");
+  // coins[1].style.transition = 'all 1s ease-in-out';
+
+  setTimeout(() => {
+      coinicons[2].classList.toggle('dino-ton')
+      coinicons[1].classList.toggle('dino-btc')
+      coinicons[0].classList.toggle('dino-usdt')
+  }, 1000);
+  
+}
+
+// ShuffleCoins()
+
 
 const timeoutIds = {}; // Object to store timeout IDs
 
@@ -242,11 +265,11 @@ async function startAnimations(target) {
   
   // setTimeout(() => animateBubbles(lightBubblesContainer), 20000);
   // setTimeout(() => animateBubbles(darkBubblesContainer), 20000);
-  timeoutIds.animateBubbles_light = setTimeout(() => animateBubbles(lightBubblesContainer), 15000);
-  timeoutIds.animateBubbles_dark = setTimeout(() => animateBubbles(darkBubblesContainer), 15000);
+  timeoutIds.animateBubbles_light = setTimeout(() => animateBubbles(lightBubblesContainer), 16000);
+  timeoutIds.animateBubbles_dark = setTimeout(() => animateBubbles(darkBubblesContainer), 16000);
   
   // setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 26000);
-  timeoutIds.anonpaymentsBubblesContainer = setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 22000);
+  timeoutIds.anonpaymentsBubblesContainer = setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 23000);
 
 }
 

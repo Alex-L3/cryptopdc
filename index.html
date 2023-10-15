@@ -21,8 +21,8 @@
 
       <section name="header" class="mx-auto max-w-7xl px-5 sm:px-10 py-[44px] sm:py-[40px]">
           <section name="navigation" class="flex justify-between items-center">
-            <div id="logo" class="">
-                <a href="#">
+            <div id="logo" class="nav-logo">
+                <a href="/">
                     <div class="mr-[6rem] w-[2.75rem] md:max-w-[64px] md:w-20">
                         <svg class="rounded-xl sm:rounded-2xl " viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#44A3DD" points="0 0 64 0 64 64 0 64" />
                             <path d="M12.5002858,23 L25.6761004,23 C26.6656866,23 27.5759827,23.5413597 28.0484682,24.4108643 L39.7799231,46 L24.081859,46 C23.0922729,46 22.1819767,45.4586403 21.7094912,44.5891357 L11.1823037,25.2161865 C10.7867648,24.4882851 11.0561979,23.5775568 11.7840993,23.1820179 C12.0039143,23.0625713 12.2501137,23 12.5002858,23 Z" fill="#BEE5F7" />
@@ -32,22 +32,22 @@
                 </a>
             </div>
             <nav name="bullets" class="base-text ">
-                <ul class="hidden md:flex gap-8 mr-8">
-                    <li><a href="#usecases-block">Use cases</a></li>
-                    <li><a href="#features-block">Features</a></li>
-                    <li><a href="#instruction-block">How to start</a></li>
+                <ul class="hidden md:flex gap-8 mr-8 ">
+                    <li class="nav-links"><a href="#usecases-block">Use cases</a></li>
+                    <li class="nav-links"><a href="#features-block">Features</a></li>
+                    <li class="nav-links"><a href="#instruction-block">How to start</a></li>
                 </ul>
             </nav>
             <div name="button-mode">
         
                 <div class="w-64 flex items-center gap-3 justify-center">
                     <div class="w-6 h-6 lg:w-10 lg:h-10 flex items-center justify-center ">
-                        <img id="sun-icon" class="inline dark:hidden hover:scale-95 transition-all duration-100" src="/img/landing/hero-block/theme-icon/sun_desk.svg"  alt="Light Mode">
-                        <img id="moon-icon" class="hidden dark:inline hover:scale-95 transition-all duration-100" src="/img/landing/hero-block/theme-icon/moon_desk.svg" alt="Dark Mode">
+                        <img id="sun-icon" class="inline dark:hidden hover:scale-95 transition-transform duration-300 ease-in-out" src="/img/landing/hero-block/theme-icon/sun_desk.svg"  alt="Light Mode">
+                        <img id="moon-icon" class="hidden dark:inline hover:scale-95 transition-transform duration-300 ease-in-out" src="/img/landing/hero-block/theme-icon/moon_desk.svg" alt="Dark Mode">
                     </div>
         
-                    <a class="btn-secondary shrink-0 dark:hidden">Get started</a>
-                    <a class="btn-outline shrink-0 hidden dark:inline">Get started</a>
+                    <a class="btn-secondary shrink-0 dark:hidden" href="">Get started</a>
+                    <a class="btn-outline shrink-0 hidden dark:inline" href="">Get started</a>
                 </div>
         
             </div>
@@ -191,9 +191,9 @@
           
               <div name="pagination" class=" flex w-[335px] sm:h-72 sm:w-auto gap-3 sm:flex-col items-center justify-between text-white sm:shrink-0">
                   <p id="current-slide" class="description-text">01</p>
-                  <div id="page-slide-1" onclick="setSlide(1)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide-active"></div>
-                  <div id="page-slide-2" onclick="setSlide(2)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
-                  <div id="page-slide-3" onclick="setSlide(3)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
+                  <div id="page-slide-1" onclick="setSlide(0)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide-active"></div>
+                  <div id="page-slide-2" onclick="setSlide(1)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
+                  <div id="page-slide-3" onclick="setSlide(2)" class="w-full h-1 sm:h-full sm:w-1 rounded-full bg-white opacity-[24%] hover:opacity-100 transition-opacity duration-200 cursor-pointer page-slide"></div>
                   <!-- active bg blue #41A4DF opacity-100 -->
                   <p id="all-slides" class="description-text">03</p>
               </div>
@@ -360,7 +360,7 @@
                   <!-- LandingFrameExchanges -->
                   <section class="inline-flex justify-center items-center -space-x-3">
 
-                    <div name="left-group" class="icon-container  inline-flex -space-x-[42px] lg:-space-x-[62px]">
+                    <div name="left-group" class="coin-container  inline-flex -space-x-[42px] lg:-space-x-[62px]">
                 
                         <!-- USDT -->
                         <div id="l-coin-usdt" class="l-coin icon  w-[66px] h-[66px] lg:w-[96px] lg:h-[96px] p-3 lg:p-5 rounded-full  outline outline-offset-0 outline-3 lg:outline-4 dark:outline-[#1A1A1A] outline-[#F1F5F9] bg-gradient-to-tr from-[#8DDAD5] to-[#1BA27A] justify-center items-center">
@@ -388,7 +388,7 @@
                 
                     </div>
                 
-                <div name="between-arrows" class="flex h-min justify-center items-center">
+                <div name="between-arrows" class="flex h-min justify-center items-center z-10">
                 <div class="flex flex-col py-1 px-[10px] lg:px-3 rounded-[19px]  outline-offset-[-1px] backdrop-blur-lg bg-white/60 outline outline-1 outline-white/60 dark:outline-[#191919] dark:bg-[#111111]/60">
                 
                     <div class="inline dark:hidden">
@@ -610,16 +610,17 @@
                   </div>
               </div>
           
+              <!-- Anonymous payments -->
               <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 gap-6 items-center sm:p-[42px] sm:gap-5 md:px-[10%] md:col-span-5 sm:col-span-3">
           
                   <div class="w-full h-full font-mono ">
                       <div id="anon-payments" class="relative bg-gradient-to-tr from-[#0974F1] to-[#9FCCFA] rounded-preset flex justify-center items-center h-full px-5 py-10 p-[40%]">
                           <div class="w-32 h-32"></div>
                           
-                          <img class="absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 1 of Anonymous payments">
-                          <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/2.png" alt="Illustration 2 of Anonymous payments">
-                          <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/3.png" alt="Illustration 3 of Anonymous payments">
-                          <img class="hidden absolute max-w-[14rem] lg:max-w-[22rem]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 3 of Anonymous payments">
+                          <img class="absolute max-w-[17rem] sm:max-w-[12rem] md:max-w-[14rem]  lg:max-w-[80%]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 1 of Anonymous payments">
+                          <img class="hidden absolute max-w-[17rem] sm:max-w-[12rem] md:max-w-[14rem] lg:max-w-[80%]" src="/img/landing/features-block/anonpayments/2.png" alt="Illustration 2 of Anonymous payments">
+                          <img class="hidden absolute max-w-[17rem] sm:max-w-[12rem] md:max-w-[14rem] lg:max-w-[80%]" src="/img/landing/features-block/anonpayments/3.png" alt="Illustration 3 of Anonymous payments">
+                          <img class="hidden absolute max-w-[17rem] sm:max-w-[12rem] md:max-w-[14rem] lg:max-w-[80%]" src="/img/landing/features-block/anonpayments/1.png" alt="Illustration 3 of Anonymous payments">
                           <!-- ANIMATION HERE   -->
                       </div>
                   </div>
@@ -873,8 +874,8 @@
     
                 <!-- aNavigation /> -->
                 <section name="navigation" class="flex justify-between items-center">
-                    <div id="logo">
-                        <a href="#">
+                    <div id="logo" class="nav-logo">
+                        <a href="/">
                             <div class="mr-[6rem] w-[2.75rem] md:max-w-[64px] md:w-20">
                                 <svg class="rounded-xl sm:rounded-2xl " viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#44A3DD" points="0 0 64 0 64 64 0 64" />
                                     <path d="M12.5002858,23 L25.6761004,23 C26.6656866,23 27.5759827,23.5413597 28.0484682,24.4108643 L39.7799231,46 L24.081859,46 C23.0922729,46 22.1819767,45.4586403 21.7094912,44.5891357 L11.1823037,25.2161865 C10.7867648,24.4882851 11.0561979,23.5775568 11.7840993,23.1820179 C12.0039143,23.0625713 12.2501137,23 12.5002858,23 Z" fill="#BEE5F7" />
@@ -885,20 +886,20 @@
                     </div>
                     <nav name="bullets" class="base-text ">
                         <ul class="hidden md:flex gap-8 mr-8">
-                            <li class="text-white"><a href="#usecases-block">Use cases</a></li>
-                            <li class="text-white"><a href="#features-block">Features</a></li>
-                            <li class="text-white"><a href="#instruction-block">How to start</a></li>
+                            <li class="text-white nav-links"><a href="#usecases-block">Use cases</a></li>
+                            <li class="text-white nav-links"><a href="#features-block">Features</a></li>
+                            <li class="text-white nav-links"><a href="#instruction-block">How to start</a></li>
                         </ul>
                     </nav>
                     <div name="button-mode">
                 
                         <div>
-                            <a class="btn-outline">Get started</a>
+                            <a class="btn-outline" href="#">Get started</a>
                         </div>
                 
                     </div>
                 </section>
-                <p>©2023 Crypto Bot</p>
+                <p class="cursor-default">©2023 Crypto Bot</p>
             </footer>
         </div>
     </section>
@@ -914,32 +915,6 @@
 
       console.log('hello')
       
-        function ShuffleCoins(){
-        const coinicons = document.querySelectorAll(".l-coin");
-        const logos = document.querySelectorAll(".l-coin-icon");
-        coins[1].style.transition = 'all 1s ease-in-out';
-
-        setTimeout(() => {
-            coinicons[1].classList.toggle('dino')
-        }, 1000);
-    
-        setTimeout(() => {
-            coinicons[0].classList.toggle('dino')
-        }, 2000);
-    
-        setTimeout(() => {
-            coinicons[2].classList.toggle('dino')
-        }, 3000);
-    
-        }
-
-        // ShuffleCoins()
-
-
-
-
-
-
     </script>
   </body>
 </html>
