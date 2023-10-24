@@ -2674,6 +2674,10 @@ html {
     max-width: 80%;
   }
 
+  .lg\:max-w-none{
+    max-width: none;
+  }
+
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -2746,6 +2750,10 @@ html {
 }
 
 @media (min-width: 1280px){
+  .xl\:inline{
+    display: inline;
+  }
+
   .xl\:leading-\[135\%\]{
     line-height: 135%;
   }
