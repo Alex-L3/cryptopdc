@@ -285,3 +285,103 @@ function cancelAnimations(target) {
 
 const blockfeatures = document.getElementById('features-block');
 observer.observe(blockfeatures);
+
+
+
+const h1Animation = anime({
+  targets: ".h1-header",
+  translateX: [-60, 0],
+  opacity: [0, 1],
+  duration: 2500,
+  delay: 400,
+  easing: "easeOutExpo",
+});
+
+const ImagePhoneAnimation = anime({
+  targets: "#img-phone",
+  translateX: [60, 0],
+  opacity: [0, 1],
+  duration: 2500,
+  delay: 800,
+  easing: "easeOutExpo",
+});
+
+const getStartedBtnAnimation = anime({
+  targets: ".btn",
+  opacity: [0, 1],
+  translateY: [20, 0],
+  duration: 600,
+  delay: 1500,
+  easing: "easeInExpo",
+});
+
+const photoBotsAnimation = anime({
+  targets: "#photo-bots .rounded-full",
+  translateX: [-10,0],
+  opacity: [0, 1],
+  delay: anime.stagger(150, {start: 1500}), 
+  duration: 500,
+  easing: "easeInOutQuad",
+});
+
+const baseTextAnimation = anime({
+  targets: "#header .base-text, #hero-block .base-text",
+  translateY: [30, 0],
+  opacity: [0, 1],
+  duration: 2000,
+  //delay: 1500,
+  delay: anime.stagger(200, {start: 1500}), 
+  easing: "easeOutExpo",
+});
+
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log('entry!')
+        if (entry.isIntersecting) {
+          scrollAnimateBaseText(entry.target);
+        } else {
+        // cancelAnimations(entry.target)
+        }
+    });
+});
+
+async function scrollAnimateBaseText(target) {
+    const baseTextAnimation = anime({
+        targets: target,
+        translateY: [30, 0],
+        opacity: [0, 1],
+        duration: 2000,
+        // delay: 400,
+        delay: anime.stagger(200, {start: 400}), 
+        easing: "easeOutExpo",
+    });
+}
+
+const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text, #footer .base-text, #yBlockDevCommunity .base-text');
+basetexts.forEach((el) => observer2.observe(el));
+
+
+const observer3 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log('entry!')
+        if (entry.isIntersecting) {
+          scrollAnimateHeadings(entry.target);
+        } else {
+        // cancelAnimations(entry.target)
+        }
+    });
+});
+
+async function scrollAnimateHeadings(target) {
+    const baseTextAnimation = anime({
+  targets: target,
+  translateX: [-60, 0],
+  opacity: [0, 1],
+  duration: 1500,
+  delay: 200, // Start immediately
+  easing: "easeOutExpo",
+    });
+}
+
+const headers = document.querySelectorAll("#yBlockAPI .h2-header, #yBlockDevCommunity .h2-header ");
+headers.forEach((el) => observer3.observe(el));

@@ -795,7 +795,7 @@
         </div>
 
         <!-- yBlockDevCommunity -->
-        <section class="pt-3 pb-10 sm:pt-6 sm:pb-20 rounded-b-[1.5rem] sm:rounded-b-[2.5rem] z-10">
+        <section id="yBlockDevCommunity" class="pt-3 pb-10 sm:pt-6 sm:pb-20 rounded-b-[1.5rem] sm:rounded-b-[2.5rem] z-10">
           <div class="flex flex-col gap-6 min-h-min items-center flex-wrap mx-4 sm:mx-10">
               <div class="sm:max-w-[62rem]  w-full flex flex-col items-center gap-6 sm:gap-10">
       
@@ -835,8 +835,7 @@
                           </div>
                           <p class="base-text">crypto-pay-api</p>
                       </div>
-      
-      
+
                       <div name="library-4" class="flex flex-col justify-center items-center gap-4">
                           <div name="python" class="w-16 h-16 lg:w-24 lg:h-24 md:h-16 md:w-16 rounded-full  p-2 bg-gradient-to-tl from-[#18181D] to-[#242429]">
                               <svg width="100%" height="100%" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -856,8 +855,7 @@
                           </div>
                           <p class="base-text">cryptobot-sdk-<br class="lg:inline">golang</p>
                       </div>
-      
-                      
+                            
                   </div>
                   <button class="btn sm:btn-lg">Open Devs Chat</button>
           </div>
@@ -868,7 +866,7 @@
 
       <!-- Footer -->
 
-      <section class="h-[300px] bg-[#232328] -z-20 pt-[6rem] pb-8 sm:pt-[7.5rem] sm:pb-10 mt-[-2.5rem]   ">
+      <section id="footer" class="h-[300px] bg-[#232328] -z-20 pt-[6rem] pb-8 sm:pt-[7.5rem] sm:pb-10 mt-[-2.5rem] ">
         <div class=" max-w-7xl mx-auto px-5 sm:px-10">
             <footer class="flex flex-col gap-6 text-white base-text">
     
@@ -905,7 +903,6 @@
     </section>
     
     </div>
-
     
     <!-- <script type="module" src="/main.js"></script> -->
     <script src="/js/app.js"></script>
@@ -914,111 +911,6 @@
     <script>
 
     console.log('hello')
-
-    // var scrReveal = anime.timeline({
-    //     easing: 'easeOutExpo',
-    //     duration: 2500
-    // })
-    
-    // scrReveal.add({
-    //     targets: '[name="hero-block-title"], #img-phone',
-    //     easing: 'easeOutExpo',
-    //     duration: 0,
-    //     opacity: 0,
-    //     translateX: -60,
-    //     delay: 0,
-    // }).add({
-    //     targets: '[name="hero-block-title"], #img-phone',
-    //     opacity: 100,
-    //     translateX: 0,
-    //     delay: 400,
-    //     easing: 'easeOutExpo',
-    // });
-
-
-
-
-    const h1Animation = anime({
-      targets: ".h1-header",
-      translateX: [-60, 0],
-      opacity: [0, 1],
-      duration: 2500,
-      delay: 400,
-      easing: "easeOutExpo",
-    });
-
-    const ImagePhoneAnimation = anime({
-      targets: "#img-phone",
-      translateX: [60, 0],
-      opacity: [0, 1],
-      duration: 2500,
-      delay: 800,
-      easing: "easeOutExpo",
-    });
-
-    const getStartedBtnAnimation = anime({
-      targets: ".btn",
-      opacity: [0, 1],
-      translateY: [20, 0],
-      duration: 600,
-      delay: 1500,
-      easing: "easeInExpo",
-    });
-
-    const photoBotsAnimation = anime({
-      targets: "#photo-bots .rounded-full",
-      translateX: [-10,0],
-      opacity: [0, 1],
-      delay: anime.stagger(150, {start: 1500}), 
-      duration: 500,
-      easing: "easeInOutQuad",
-    });
-
-    // const h2Animation = anime({
-    //   targets: ".h2-header, .h3-header",
-    //   translateX: [-60, 0],
-    //   opacity: [0, 1],
-    //   duration: 2500,
-    //   delay: 400, // Start immediately
-    //   easing: "easeOutExpo",
-    // });
-
-    const baseTextAnimation = anime({
-      targets: "#header .base-text, #hero-block .base-text",
-      translateY: [30, 0],
-      opacity: [0, 1],
-      duration: 2000,
-      //delay: 1500,
-      delay: anime.stagger(200, {start: 1500}), 
-      easing: "easeOutExpo",
-    });
-
-    const observer2 = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log('entry!')
-            if (entry.isIntersecting) {
-            // console.log("here here here")
-            scrollAnimateBaseText(entry.target);
-            } else {
-            // cancelAnimations(entry.target)
-            }
-        });
-    });
-
-    async function scrollAnimateBaseText(target) {
-        const baseTextAnimation = anime({
-            targets: target,
-            translateY: [30, 0],
-            opacity: [0, 1],
-            duration: 2000,
-            delay: 400,
-            // delay: anime.stagger(200, {start: 200}), 
-            easing: "easeOutExpo",
-        });
-    }
-
-    const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text ');
-    basetexts.forEach((el) => observer2.observe(el));
 
     </script>
   </body>
