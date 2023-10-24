@@ -19,7 +19,7 @@
 
     <div name="root" class=" bg-white dark:bg-[#0D0D12] mx-auto w-full ">
 
-      <section name="header" class="mx-auto max-w-7xl px-5 sm:px-10 py-[44px] sm:py-[40px]">
+      <section id="header" class="mx-auto max-w-7xl px-5 sm:px-10 py-[44px] sm:py-[40px] ">
           <section name="navigation" class="flex justify-between items-center">
             <div id="logo" class="nav-logo">
                 <a href="/">
@@ -58,7 +58,7 @@
             <div name="hero-block-description" class="py-5 col-span-7 max-w-2xl">
                 <div name="hero-block-title" class="flex flex-col gap-6 sm:gap-8 items-center sm:items-start sm:flex-none lg:min-w-[692px] md:min-w-[592px] sm:min-w-[377px]">
     
-                    <h1 class="h1-header lg:h1-header-lg text-center sm:text-left sm:text-6xl max-w-[470px] sm:max-w-max dark:text-white">
+                    <h1 class="h1-header lg:h1-header-lg text-center sm:text-left sm:text-6xl max-w-[470px] sm:max-w-max dark:text-white  ">
                         Crypto<br class="lg:hidden"> payments for <span class="text-general">telegram bots</span>
                     </h1>
     
@@ -118,7 +118,7 @@
 
         <section id="usecases-block" class=" bg-[#232328] dark:bg-dark181 sm:py-20 lg:py-48 lg:my-auto  py-8  ">
           <div onclick="const nextSlideIndex = (currentSlideIndex + 1) % slides.length; setSlide(nextSlideIndex + 1);"
-          class=" max-w-7xl mx-auto px-5 sm:px-10 overflow-hidden ">
+          class=" max-w-7xl mx-auto px-5 sm:px-10 overflow-hidden  ">
           
               <!-- <div class="flex flex-col gap-8 items-center sm:flex-row sm:flex-1 sm:justify-between"> -->
               <div class=" flex flex-col items-center gap-8 sm:flex-row sm:flex-1 sm:justify-between sm:items-center">
@@ -170,7 +170,7 @@
           
               <!-- Screen 3 -->
               <div class="slide hidden ">
-                  <div class="flex flex-col gap-8  sm:flex-row sm:flex-1 sm:justify-around sm:items-center    lg:grid lg:grid-cols-12">
+                  <div class="flex flex-col gap-8  sm:flex-row sm:flex-1 sm:justify-around sm:items-center    lg:grid lg:grid-cols-12  ">
                       <div name="pic-frame" class="w-full max-w-[335px] sm:max-w-none sm:w-1/3 bg-gradient-to-t from-[#C2E9FB] to-[#A1C4FD] rounded-preset  lg:w-full lg:col-span-5 ">
                           <div class=" aspect-square flex items-center lg:p-8">
                               <img class=" " src="/img/landing/usercases-block/img3.png">
@@ -182,7 +182,7 @@
                               Endless <br class="hidden sm:inline">customization:</span> <br>with Webhooks
                           </h2>
                           <p class="base-text text-white text-center sm:text-left">
-                              Automatically unlock exclusive content<br>to your users.
+                              Receive successful payment notifications in<br>real-time. Integrate to any scenario of your service.
                           </p>
                           <button class="btn w-full sm:w-auto">Open API Docs</button>
                       </div>
@@ -640,7 +640,7 @@
           
           
           <div name="content" class="flex flex-col gap-6 sm:gap-10">
-              <h2 class="h2-header lg:h2-header-lg text-center text-[#252525] dark:text-white">
+              <h2 class="h2-header lg:h2-header-lg text-center text-[#252525] dark:text-white hide">
                   Quick start using <br class="md:hidden"><span class="text-general">Crypto Pay</span>
               </h2>
           
@@ -692,7 +692,7 @@
                           <div class="w-9 h-9 md:w-16 md:h-16 bg-step-circle dark:bg-step-circle-darkmode rounded-full cursor-default  flex justify-center items-center text-center ">
                               <p class="h3-header text-white dark:text-[#0D0D12]">1</p>
                           </div>
-                          <div name="step-n-h3-text" class="flex flex-col gap-4 base-text">
+                          <div name="step-n-h3-text" class="flex flex-col gap-4 base-text ">
                               <h3 class="h3-header">Authorizing your app</h3>
                               <div name="step-n-description" class="flex flex-col gap-2">
                                   <ol class="list-inside list-decimal flex flex-col gap-2 base-text text-opacity-80">
@@ -784,7 +784,7 @@
         </section>
     
         <!-- yBlockAPI max-w-7xl mx-auto px-5 sm:px-10 -->
-        <div name="BlockAPI" class="max-w-7xl mx-auto px-5 sm:px-10">
+        <div name="BlockAPI" id="yBlockAPI" class="max-w-7xl mx-auto px-5 sm:px-10">
           <section class="px-5 py-20 sm:py-[7.5rem]"> <!-- py20 от ручного замера на моб 80px! desktop120px -->
             <div class="api-block-pic-mobile z-20 sm:api-block-pic relative flex flex-col gap-6 sm:gap-8 justify-end sm:justify-center h-[515px] sm:h-[550px] rounded-2xl sm:rounded-[40px] px-8 py-7 sm:px-20 text-white  ">
                 <h2 class="h2-header sm:h2-header-lg">Crypto Pay API</h2>
@@ -800,7 +800,7 @@
               <div class="sm:max-w-[62rem]  w-full flex flex-col items-center gap-6 sm:gap-10">
       
                   <div class="flex flex-col items-center gap-6 text-[#111111] text-opacity-80">
-                      <h2 class="h2-header sm:h2-header-lg dark:text-white ">Join dev community</h2>
+                      <h2 class="h2-header sm:h2-header-lg text-[#0D0D12] dark:text-white">Join dev community</h2>
                       <p class="base-text sm:base-text-lg text-center max-w-xs sm:max-w-md md:max-w-xl">
                           Connect with bot developers and explore the possibilities
                           our crypto payments service unlocks.
@@ -913,8 +913,113 @@
 
     <script>
 
-      console.log('hello')
-      
+    console.log('hello')
+
+    // var scrReveal = anime.timeline({
+    //     easing: 'easeOutExpo',
+    //     duration: 2500
+    // })
+    
+    // scrReveal.add({
+    //     targets: '[name="hero-block-title"], #img-phone',
+    //     easing: 'easeOutExpo',
+    //     duration: 0,
+    //     opacity: 0,
+    //     translateX: -60,
+    //     delay: 0,
+    // }).add({
+    //     targets: '[name="hero-block-title"], #img-phone',
+    //     opacity: 100,
+    //     translateX: 0,
+    //     delay: 400,
+    //     easing: 'easeOutExpo',
+    // });
+
+
+
+
+    const h1Animation = anime({
+      targets: ".h1-header",
+      translateX: [-60, 0],
+      opacity: [0, 1],
+      duration: 2500,
+      delay: 400,
+      easing: "easeOutExpo",
+    });
+
+    const ImagePhoneAnimation = anime({
+      targets: "#img-phone",
+      translateX: [60, 0],
+      opacity: [0, 1],
+      duration: 2500,
+      delay: 800,
+      easing: "easeOutExpo",
+    });
+
+    const getStartedBtnAnimation = anime({
+      targets: ".btn",
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+      delay: 1500,
+      easing: "easeInExpo",
+    });
+
+    const photoBotsAnimation = anime({
+      targets: "#photo-bots .rounded-full",
+      translateX: [-10,0],
+      opacity: [0, 1],
+      delay: anime.stagger(150, {start: 1500}), 
+      duration: 500,
+      easing: "easeInOutQuad",
+    });
+
+    // const h2Animation = anime({
+    //   targets: ".h2-header, .h3-header",
+    //   translateX: [-60, 0],
+    //   opacity: [0, 1],
+    //   duration: 2500,
+    //   delay: 400, // Start immediately
+    //   easing: "easeOutExpo",
+    // });
+
+    const baseTextAnimation = anime({
+      targets: "#header .base-text, #hero-block .base-text",
+      translateY: [30, 0],
+      opacity: [0, 1],
+      duration: 2000,
+      //delay: 1500,
+      delay: anime.stagger(200, {start: 1500}), 
+      easing: "easeOutExpo",
+    });
+
+    const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log('entry!')
+            if (entry.isIntersecting) {
+            // console.log("here here here")
+            scrollAnimateBaseText(entry.target);
+            } else {
+            // cancelAnimations(entry.target)
+            }
+        });
+    });
+
+    async function scrollAnimateBaseText(target) {
+        const baseTextAnimation = anime({
+            targets: target,
+            translateY: [30, 0],
+            opacity: [0, 1],
+            duration: 2000,
+            delay: 400,
+            // delay: anime.stagger(200, {start: 200}), 
+            easing: "easeOutExpo",
+        });
+    }
+
+    const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text ');
+    basetexts.forEach((el) => observer2.observe(el));
+
     </script>
   </body>
 </html>

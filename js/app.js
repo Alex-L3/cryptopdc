@@ -239,10 +239,11 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // console.log("here here here")
-      entry.target.classList.add('show');
+      // entry.target.classList.remove('hide');
+      // entry.target.classList.add('show');
       startAnimations(entry.target);
     } else {
-      entry.target.classList.remove('show');
+      // entry.target.classList.remove('show');
       cancelAnimations(entry.target)
     }
   });

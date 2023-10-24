@@ -1565,6 +1565,11 @@ html {
   line-height: 1.25;
 }
 
+.text-\[\#0D0D12\]{
+  --tw-text-opacity: 1;
+  color: rgb(13 13 18 / var(--tw-text-opacity));
+}
+
 .text-\[\#111111\]{
   --tw-text-opacity: 1;
   color: rgb(17 17 17 / var(--tw-text-opacity));
@@ -2745,3 +2750,4 @@ html {
     line-height: 135%;
   }
 }
+
