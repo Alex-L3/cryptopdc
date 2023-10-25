@@ -14,7 +14,7 @@
     html {
         scroll-behavior: smooth;
     }
- 
+    
 }
 
 @layer components {
@@ -35,15 +35,22 @@
         @apply text-white outline outline-1 outline-white/60 hover:outline-white/100 cursor-pointer px-8 py-3 lg:px-[2.5rem] lg:py-[1rem] lg:text-xl rounded-full font-medium leading-[120%] whitespace-nowrap hover:transition-all ease-in duration-200
     }
 
+    .nav-links {
+        @apply hover:-translate-y-1 transition-transform duration-300 ease-in-out
+    }
 
+    .nav-logo {
+        @apply hover:-translate-y-1 transition-transform duration-300 ease-in-out
+    }
 
     .base-text {
         @apply font-sans text-lg lg:text-xl font-normal leading-6 text-[#0D0D12] dark:text-white
     }
 
+
     .h2-header {
         /* mobile/H2 header */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 629;
@@ -55,17 +62,17 @@
         @apply md:text-[2.25rem]
     }
 
-
     .h2-header-lg {
         /* desktop/H2 header */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 3.5rem;
         font-style: normal;
         font-weight: 629;
         line-height: 110%; /* 3.85rem */
         letter-spacing: -0.105rem;
     }
-    
+
+
 }
 
 
@@ -73,7 +80,7 @@
 
     .h1-header {
         /* mobile/H1 header */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 46px;
         /* font-style: normal; */
         font-weight: 629; 
@@ -83,7 +90,7 @@
 
     .h1-header-lg {
         /* desktop/H1 header */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 5rem;
         /* font-style: normal; */
         font-weight: 629;
@@ -93,7 +100,7 @@
 
     .h3-header {
         @apply text-[1.75rem] lg:text-[2.625rem];
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 629;
         line-height: 110%; /* 2.8875rem */
@@ -106,23 +113,22 @@
 
     .button-text {
         /* mobile/Button */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 18px;
         line-height: 120%; /* 21.6px */
     }
 
     .button-text {
         /* mobile/Button */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 18px;
         line-height: 120%; /* 21.6px */
         @apply text-lg lg:text-xl leading-[120%]
     }
 
-
     .button-text-lg {
         /* desktop/Button */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 20px;
         line-height: 120%; /* 24px */
     }
@@ -130,7 +136,7 @@
     .base-text {
         /* mobile/Base-text */
         @apply text-lg lg:text-xl;
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         /* font-size: 18px; */
         font-style: normal;
         font-weight: 400;
@@ -139,7 +145,7 @@
 
     .base-text-lg {
         /* desktop/Base-text */
-        font-family: Inter;
+        font-family: 'Inter', sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -223,7 +229,6 @@
         font-weight: 400;
     }
 
-
     .api-block-pic {
         background-image:
         url('img/landing/api-block/APIBlock_Pic-min.png'),
@@ -237,24 +242,126 @@
         background-image:
         url('img/landing/api-block/CoverPic_mobile-min.png'),
         /* url('img/landing/api-block/layer-mobile-bg-img.svg'), */
+        /* linear-gradient(220deg, #FFF -28.5%, #0974F1 147.07%), */
+        linear-gradient(220deg, transparent 0%, #FFF -28.5%, #0974F1 147.07%, transparent 100%),
         linear-gradient(220deg, #9FCCFA -32.5%, #0974F1 147.07%);
         background-size: cover;
         background-position: center center;
     }
 
-
     .active-bubble {
         @apply inline
     }
 
-    .cursor-position {
-        transform: translateX(40px);
+}
+
+
+.animate {
+    translate: -3rem;
+    transition: 'all 1s ease-in-out';
+    animation-duration: 2s;
+}
+
+.animate::before {
+    opacity: 0;
+    
+}
+
+.animate::after {
+    opacity: 100;
+    translate: 0;
+}
+
+
+#l-coin-usdt {
+    order: 1;
+    z-index: 1;
+}
+
+#l-coin-btc {
+    order: 2;
+    z-index: 1;
+}
+
+#l-coin-ton {
+    order: 3;
+    z-index: 1;
+}
+
+.dino-icon {
+    animation-duration: 1s;
+    transition: all 1s ease-in-out;
+    animation-name: opacityDino;
+}
+
+.dino-ton {
+    animation-duration: 3s;
+    transition: all 3s ease-in-out;
+    animation-name: moveTon;
+}
+
+.dino-btc {
+    animation-duration: 3s;
+    transition: all 3s ease-in-out;
+    animation-name: moveBtc;
+}
+
+.dino-usdt {
+    animation-duration: 3s;
+    transition: all 3s ease-in-out;
+    animation-name: moveUsdt;
+}
+
+@keyframes moveTon { 
+    1% {
+        z-index: 0;
     }
-
-    .createapp-cursor {
-        @apply translate-x-7
+    33% {
+        z-index: 0;
+        transform: translateX(-66%);
     }
+    66% {
+        z-index: 1;
+        transform: translateX(-33%);
+    }
+    100% {
+        z-index: 2;
+        transform: translateX(0);
+    }
+}
 
- 
+@keyframes moveBtc { 
+    33% {
+        z-index: 2;
+        transform: translateX(+33%);
+    }
+    34%{
+        z-index: 0;
+    }
+    66% {
+        z-index: 0;
+        transform: translateX(-33%);
+    }
+     100% {
+        z-index: 1;
+        transform: translateX(0);
+    }
+}
 
+@keyframes moveUsdt { 
+    33% {
+        z-index: 1;
+        transform: translateX(33%);
+    }
+    66% {
+        z-index: 3;
+        transform: translateX(66%);
+    }
+    67%{
+        z-index: 0;
+    }
+    100% {
+        z-index: 0;
+        transform: translateX(0);
+    }
 }

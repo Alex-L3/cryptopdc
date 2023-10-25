@@ -215,18 +215,18 @@
                           <h3 class="h3-header ">Accept a wide range of cryptocurrencies</h3>
                           <p class="base-text opacity-80">Bill any supported cryptocurrencies with asset parameter in <a class="landing-link">GetInvoice</a> method</p>
                           <!-- <LandingFrameCurrencyOld class="-order-1 md:order-1" /> -->
-                          <div name="FrameCurrency" class="-order-1 md:order-1">
+                          <div name="FrameCurrency" class="-order-1 md:order-1 mt-4">
                             <div name="coins">
 
-                              <div name="currency-coins-mobile" class="flex flex-wrap max-w-sm mx-auto gap-2 justify-center md:hidden">
-                                  <div class="flex gap-3">
+                              <div id="currency-coins-mobile" class="flex flex-wrap max-w-sm mx-auto gap-2 justify-center md:hidden">
+                                  <div id="mobilecoins" class="flex gap-3">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/ETH.svg" alt="ETH">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/USDT.svg" alt="USDT">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/BTC.svg" alt="BTC">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/TON.svg" alt="TON">
                                   </div>
                               
-                                  <div class="flex gap-3 ml-4">
+                                  <div id="mobilecoins" class="flex gap-3 ml-4">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/BNB.svg" alt="BNB">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/TRX.svg" alt="TRX">
                                       <img class="w-[56px]" src="/img/landing/features-block/CoinIcons/USDC.svg" alt="USDC">
@@ -323,7 +323,7 @@
               <div class="flex flex-col w-full min-h-min bg-[#F7F9FB] dark:bg-dark181 rounded-3xl p-8 md:py-[42px] gap-6 items-center md:col-span-5  md:row-start-2 md:gap-4  md:px-[10%]    sm:col-span-3">
                   <!-- ANIMATION HERE   -->
                   <!-- LandingFrameCreateApp -->
-                  <section class="flex flex-1 flex-col justify-center items-center  ">
+                  <section class="flex flex-1 flex-col justify-between items-center ">
       
                       <div class=" relative ">
                           <!-- light-theme version -->
@@ -334,21 +334,24 @@
                           <div name="button-createapp-dark" class="hidden dark:flex">
                               <img class="createapp-button" src="/img/landing/features-block/CreateApp_dark.svg"/>
                           </div>
-                      </div>
-                      
+
+                          <div id="cursor-smooth" class=" createapp-cursor absolute -bottom-18 -right-12">
+                              <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.1275 3.64677C6.7178 1.12449 1.36473 4.88154 2.23774 9.88607L7.45908 39.8172C8.51449 45.8673 16.9001 46.6127 19.006 40.8435L22.4947 31.2864C22.782 30.4994 23.5293 29.9749 24.3671 29.9723L34.541 29.9403C40.6824 29.921 42.8322 21.7813 37.5012 18.7321L11.1275 3.64677Z" fill="url(#paint0_linear_129_483)" stroke="#F1F5F9" stroke-width="4"/>
+                              <defs>
+                              <linearGradient id="paint0_linear_129_483" x1="1.90306" y1="-33.3301" x2="-24.3108" y2="39.2676" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#9FCCFA"/>
+                              <stop offset="1" stop-color="#0974F1"/>
+                              </linearGradient>
+                              </defs>
+                              </svg>
+                          </div>
+                          
+                        </div>
+                        
+
                     </section>
-                    <div id="cursor-smooth" class=" createapp-cursor self-end">
-                        <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.1275 3.64677C6.7178 1.12449 1.36473 4.88154 2.23774 9.88607L7.45908 39.8172C8.51449 45.8673 16.9001 46.6127 19.006 40.8435L22.4947 31.2864C22.782 30.4994 23.5293 29.9749 24.3671 29.9723L34.541 29.9403C40.6824 29.921 42.8322 21.7813 37.5012 18.7321L11.1275 3.64677Z" fill="url(#paint0_linear_129_483)" stroke="#F1F5F9" stroke-width="4"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_129_483" x1="1.90306" y1="-33.3301" x2="-24.3108" y2="39.2676" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#9FCCFA"/>
-                        <stop offset="1" stop-color="#0974F1"/>
-                        </linearGradient>
-                        </defs>
-                        </svg>
-                    </div>
-                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                  <div class="w-full flex flex-col gap-4 dark:text-white mt-4">
                       <h3 class="h3-header">One click to start</h3>
                       <p class="base-text text-opacity-80">Open <a href="#" class="landing-link">@CryptoBot</a>, go to <a href="#" class="landing-link">Crypto Pay</a> and tap Create App to get API Token</p>
                   </div>
@@ -431,7 +434,7 @@
                     </div>
                 
                   </section>
-                  <div class="w-full flex flex-col gap-4 dark:text-white">
+                  <div class="w-full flex flex-col gap-4 dark:text-white mt-6">
                       <h3 class="h3-header ">Real-time<br>exchange rates</h3>
                       <p class="base-text text-opacity-80">Request up to date currency rate with the <a href="#" class="landing-link">getExchangeRates</a> API method</p>
                   </div>
@@ -526,14 +529,16 @@
                         
                             </div>
                         
-                          <!-- sf-button-touched  id="message-n-button" -->
-                          <div class="w-full flex gap-1 ">
-                            <div id="button-all-time" class="button-sf  w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
-                              <label id="button-label" class="text-white text-xl font-sans leading-none stylesf-button">All Time</label>
+                            <!-- sf-button-touched  id="message-n-button" -->
+                            <div class="w-full flex gap-1 relative">
+                                <div id="button-all-time" class="button-sf  w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
+                                    <label id="button-label" class="text-white text-xl font-sans leading-none stylesf-button">All Time</label>
+                                    <div class="button-tap w-6 h-6 scale-110 bg-white rounded-full opacity-0 absolute"></div>
                             </div>
                             
                             <div id="button-today" class="button-sf w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
                               <label id="button-label" class="text-white text-xl font-sans leading-none stylesf-button">Today</label>
+                              <div class="button-tap w-6 h-6 scale-110 bg-white rounded-full opacity-0 absolute"></div>
                             </div>
                           </div>
                         
@@ -541,6 +546,7 @@
                           <div class="w-full flex gap-1">
                             <div id="button-yesteday" class="button-sf w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">
                               <label id="button-label" class="text-white text-xl font-sans leading-none stylesf-button">Yesterday</label>
+                              <div class="button-tap w-6 h-6 scale-110 bg-white rounded-full opacity-0 absolute"></div>
                             </div>
                             
                             <div class="w-1/2 h-fit py-2 md:py-4 bg-[#3688C2] bg-opacity-80 rounded md:rounded-lg flex flex-col justify-center items-center gap-2.5">

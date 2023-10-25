@@ -191,11 +191,14 @@ function AnimationMessage() {
   const messages1 = messages[0].innerHTML;
   const orig_lab = labels[0].innerHTML;
 
+  const tapbutton = document.querySelectorAll('.button-tap');
+
   let i = 0;
 
   setInterval(() => {
     
   try{
+    tapMessageAnimation(tapbutton[i])
     message_viewport.innerHTML = messages[i].innerHTML;
     labels[i].innerHTML = "· " + labels[i].innerHTML + " ·";
     buttons[i].classList.add('sf-button-touched');
@@ -210,6 +213,7 @@ function AnimationMessage() {
 
   if(i === 4){
     buttons[0].classList.add('sf-button-touched');
+    tapMessageAnimation(tapbutton[0])
     let i = 0;
     return
   }
@@ -258,6 +262,7 @@ function ShuffleCoins(){
 
 
 const timeoutIds = {}; // Object to store timeout IDs
+let played = false;
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -266,9 +271,12 @@ const observer = new IntersectionObserver((entries) => {
       // entry.target.classList.remove('hide');
       // entry.target.classList.add('show');
       startAnimations(entry.target);
+      played = true;
     } else {
       // entry.target.classList.remove('show');
-      cancelAnimations(entry.target)
+      if (played) {
+        cancelAnimations()
+      }
     }
   });
 });
@@ -280,21 +288,24 @@ async function startAnimations(target) {
 
   // FrameAnimation(target);
   // setTimeout(() => FrameAnimation(target), 5000);
-  timeoutIds.frameAnimation = setTimeout(() => FrameAnimation(target), 1000);
+  // timeoutIds.frameAnimation = setTimeout(() => FrameAnimation(target), 1000);
+
+  timeoutIds.coinAnimation = setTimeout(() => coinAnimation(), 1000);
+  timeoutIds.createAppAnimation = setTimeout(() => createAppAnimation(), 3000);
  
   // setTimeout(() => ShuffleCoins(), 14000);
-  timeoutIds.shufflecoins = setTimeout(() => ShuffleCoins(), 7000);
+  timeoutIds.shufflecoins = setTimeout(() => ShuffleCoins(), 7500);
 
   // setTimeout(() => AnimationMessage(), 5000);
-  timeoutIds.animationMessage = setTimeout(() => AnimationMessage(), 8500);
+  timeoutIds.animationMessage = setTimeout(() => AnimationMessage(), 9500);
   
   // setTimeout(() => animateBubbles(lightBubblesContainer), 20000);
   // setTimeout(() => animateBubbles(darkBubblesContainer), 20000);
-  timeoutIds.animateBubbles_light = setTimeout(() => animateBubbles(lightBubblesContainer), 16000);
-  timeoutIds.animateBubbles_dark = setTimeout(() => animateBubbles(darkBubblesContainer), 16000);
+  timeoutIds.animateBubbles_light = setTimeout(() => animateBubbles(lightBubblesContainer), 17000);
+  timeoutIds.animateBubbles_dark = setTimeout(() => animateBubbles(darkBubblesContainer), 17000);
   
   // setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 26000);
-  timeoutIds.anonpaymentsBubblesContainer = setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 23000);
+  timeoutIds.anonpaymentsBubblesContainer = setTimeout(() => animateBubbles(anonpaymentsBubblesContainer), 24000);
 
 }
 
