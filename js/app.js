@@ -84,6 +84,8 @@ function startAutoSlide() {
 
 // startAutoSlide(); // Start auto-sliding when the page loads
 
+let autoSlideInterval = null;
+
 // Create an Intersection Observer to track the "usecases-block" section
 const usecasesBlock = document.getElementById('usecases-block');
 const observerautoSlide = new IntersectionObserver((entries) => {
@@ -91,7 +93,11 @@ const observerautoSlide = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             startAutoSlide(); // Start auto-sliding when "usecases-block" is in the viewport
         } else {
-            clearInterval(autoSlideInterval); // Stop auto-sliding when "usecases-block" is out of the viewport
+          // Stop auto-sliding when "usecases-block" is out of the viewport
+            if (autoSlideInterval) {
+              clearInterval(autoSlideInterval);
+              autoSlideInterval = null; // Reset autoSlideInterval to null
+            }
         }
     });
 });
@@ -354,7 +360,7 @@ const baseTextAnimation = anime({
 
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log('entry!')
+        // console.log('entry!')
         if (entry.isIntersecting) {
           scrollAnimateBaseText(entry.target);
         } else {
@@ -381,7 +387,7 @@ basetexts.forEach((el) => observer2.observe(el));
 
 const observer3 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log('entry!')
+        // console.log('entry!')
         if (entry.isIntersecting) {
           scrollAnimateHeadings(entry.target);
         } else {
