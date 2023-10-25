@@ -2631,6 +2631,10 @@ html {
     margin-bottom: auto;
   }
 
+  .lg\:mb-4{
+    margin-bottom: 1rem;
+  }
+
   .lg\:mt-\[-4px\]{
     margin-top: -4px;
   }
@@ -2771,6 +2775,10 @@ html {
 }
 
 @media (min-width: 1280px){
+  .xl\:mb-6{
+    margin-bottom: 1.5rem;
+  }
+
   .xl\:inline{
     display: inline;
   }
