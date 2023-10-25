@@ -82,7 +82,25 @@ function startAutoSlide() {
   }, 5000); // Change slides every 5 seconds
 }
 
-startAutoSlide(); // Start auto-sliding when the page loads
+// startAutoSlide(); // Start auto-sliding when the page loads
+
+// Create an Intersection Observer to track the "usecases-block" section
+const usecasesBlock = document.getElementById('usecases-block');
+const observerautoSlide = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            startAutoSlide(); // Start auto-sliding when "usecases-block" is in the viewport
+        } else {
+            clearInterval(autoSlideInterval); // Stop auto-sliding when "usecases-block" is out of the viewport
+        }
+    });
+});
+
+observerautoSlide.observe(usecasesBlock);
+
+/* Pagination Usercases End */
+
+
 
 
 /* Features Animaion Frames */
@@ -357,7 +375,7 @@ async function scrollAnimateBaseText(target) {
     });
 }
 
-const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text, #footer .base-text, #yBlockDevCommunity .base-text');
+const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text, #footer .base-text, #yBlockDevCommunity .base-text  ');
 basetexts.forEach((el) => observer2.observe(el));
 
 
