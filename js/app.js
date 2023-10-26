@@ -441,3 +441,8 @@ async function scrollAnimateHeadings(target) {
 
 const headers = document.querySelectorAll("#yBlockAPI .h2-header, #yBlockDevCommunity .h2-header ");
 headers.forEach((el) => observer3.observe(el));
+
+window.addEventListener('load', function () {
+  var preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});
