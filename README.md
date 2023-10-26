@@ -1,6 +1,6 @@
 # Responsive Landing Page Build ⚡
 
-### Build for Web Developer Contest by CryptoPay ⚡
+### Build for Web Developer Contest by CryptoBot ⚡
 
 - Beautiful landing page using HTML, CSS and Javascript.
 - With animations.
