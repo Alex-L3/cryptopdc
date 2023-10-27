@@ -2054,12 +2054,7 @@ html {
 
 /* For Dark Mode */
 
-.dark-mode #preloader {
-  background-color: #0D0D12;
-  /* Dark mode background color */
-}
-
-.dark-mode .spinner {
+.spinner-dark {
   border: 5px solid #888888;
   /* Dark mode border color */
   border-top-color: #dddddd;
