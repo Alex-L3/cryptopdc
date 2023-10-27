@@ -802,6 +802,10 @@ html {
   margin-right: -16px;
 }
 
+.mr-\[3rem\]{
+  margin-right: 3rem;
+}
+
 .mr-\[6rem\]{
   margin-right: 6rem;
 }
@@ -939,10 +943,6 @@ html {
 
 .w-6{
   width: 1.5rem;
-}
-
-.w-64{
-  width: 16rem;
 }
 
 .w-9{
@@ -2019,13 +2019,14 @@ html {
 
 /* Preloader */
 
+/* For Light Mode */
+
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2049,6 +2050,20 @@ html {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* For Dark Mode */
+
+.dark-mode #preloader {
+  background-color: #0D0D12;
+  /* Dark mode background color */
+}
+
+.dark-mode .spinner {
+  border: 5px solid #888888;
+  /* Dark mode border color */
+  border-top-color: #dddddd;
+  /* Dark mode top border color */
 }
 
 @media (min-width: 640px){
@@ -2488,6 +2503,10 @@ html {
 
   .md\:row-start-3{
     grid-row-start: 3;
+  }
+
+  .md\:mr-\[6rem\]{
+    margin-right: 6rem;
   }
 
   .md\:inline{
