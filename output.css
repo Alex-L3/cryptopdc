@@ -806,6 +806,10 @@ html {
   margin-right: 6rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -1039,6 +1043,12 @@ html {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .list-inside{
@@ -2815,6 +2825,10 @@ html {
 
   .xl\:inline{
     display: inline;
+  }
+
+  .xl\:w-\[120\%\]{
+    width: 120%;
   }
 
   .xl\:p-0{

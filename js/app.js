@@ -395,6 +395,7 @@ const observer2 = new IntersectionObserver((entries) => {
         // console.log('entry!')
         if (entry.isIntersecting) {
           scrollAnimateBaseText(entry.target);
+          observer2.unobserve(entry.target);
         } else {
         // cancelAnimations(entry.target)
         }
@@ -414,7 +415,7 @@ async function scrollAnimateBaseText(target) {
 }
 
 const basetexts = document.querySelectorAll('#instruction-block .base-text, #yBlockAPI .base-text, #footer .base-text, #yBlockDevCommunity .base-text  ');
-basetexts.forEach((el) => observer2.observe(el));
+basetexts.forEach((el) => observer2.observe(el)); // Scroll Based Animations 
 
 
 const observer3 = new IntersectionObserver((entries) => {
@@ -422,6 +423,7 @@ const observer3 = new IntersectionObserver((entries) => {
         // console.log('entry!')
         if (entry.isIntersecting) {
           scrollAnimateHeadings(entry.target);
+          observer3.unobserve(entry.target);
         } else {
         // cancelAnimations(entry.target)
         }
@@ -442,6 +444,7 @@ async function scrollAnimateHeadings(target) {
 const headers = document.querySelectorAll("#yBlockAPI .h2-header, #yBlockDevCommunity .h2-header ");
 headers.forEach((el) => observer3.observe(el));
 
+// For preloader
 window.addEventListener('load', function () {
   var preloader = document.getElementById('preloader');
   preloader.style.display = 'none';
