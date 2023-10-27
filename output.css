@@ -2036,6 +2036,7 @@ html {
 .spinner {
   width: 50px;
   height: 50px;
+  background-color: #ffffff;
   border: 5px solid #cccccc;
   border-top-color: #1a1a1a;
   border-radius: 50%;
